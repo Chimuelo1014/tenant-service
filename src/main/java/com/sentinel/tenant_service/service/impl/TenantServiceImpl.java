@@ -42,7 +42,7 @@ public class TenantServiceImpl implements TenantService {
         // Validar NIT si es tipo BUSINESS
         if (request.getType() == TenantType.BUSINESS) {
             validateNIT(request.getNit());
-            
+
             if (tenantRepository.existsByNit(request.getNit())) {
                 throw new TenantAlreadyExistsException("NIT already registered: " + request.getNit());
             }
@@ -116,7 +116,7 @@ public class TenantServiceImpl implements TenantService {
     public TenantDTO getTenantById(UUID tenantId) {
         TenantEntity tenant = tenantRepository.findById(tenantId)
                 .orElseThrow(() -> new TenantNotFoundException("Tenant not found: " + tenantId));
-        
+
         return mapToDTO(tenant);
     }
 
@@ -153,12 +153,12 @@ public class TenantServiceImpl implements TenantService {
 
         if (request.getNit() != null) {
             validateNIT(request.getNit());
-            
-            if (!request.getNit().equals(tenant.getNit()) && 
-                tenantRepository.existsByNit(request.getNit())) {
+
+            if (!request.getNit().equals(tenant.getNit()) &&
+                    tenantRepository.existsByNit(request.getNit())) {
                 throw new TenantAlreadyExistsException("NIT already registered: " + request.getNit());
             }
-            
+
             tenant.setNit(request.getNit());
         }
 
@@ -293,7 +293,12 @@ public class TenantServiceImpl implements TenantService {
         String baseSlug = name.toLowerCase()
                 .replaceAll("[^a-z0-9\\s-]", "")
                 .replaceAll("\\s+", "-")
-                .substring(0, Math.min(name.length(), 50));
+                .substring(0, Math.min(
+                        name.toLowerCase()
+                                .replaceAll("[^a-z0-9\\s-]", "")
+                                .replaceAll("\\s+", "-")
+                                .length(),
+                        50));
 
         String shortUuid = userId.toString().substring(0, 8);
         String slug = baseSlug + "-" + shortUuid;
@@ -323,7 +328,7 @@ public class TenantServiceImpl implements TenantService {
         String number = parts[0];
         int checkDigit = Integer.parseInt(parts[1]);
 
-        int[] weights = {71, 67, 59, 53, 47, 43, 41, 37, 29};
+        int[] weights = { 71, 67, 59, 53, 47, 43, 41, 37, 29 };
         int sum = 0;
 
         for (int i = 0; i < 9; i++) {
@@ -353,8 +358,7 @@ public class TenantServiceImpl implements TenantService {
                 tenant.getMaxProjects(),
                 currentCount,
                 "Project limit reached",
-                "Upgrade to BASIC plan to create more projects"
-        );
+                "Upgrade to BASIC plan to create more projects");
     }
 
     private LimitValidationResponse validateDomainLimit(TenantEntity tenant, int currentCount) {
@@ -366,8 +370,7 @@ public class TenantServiceImpl implements TenantService {
                 tenant.getMaxDomains(),
                 currentCount,
                 "Domain limit reached",
-                "Upgrade to PRO plan to add more domains"
-        );
+                "Upgrade to PRO plan to add more domains");
     }
 
     private LimitValidationResponse validateRepoLimit(TenantEntity tenant, int currentCount) {
@@ -379,8 +382,7 @@ public class TenantServiceImpl implements TenantService {
                 tenant.getMaxRepos(),
                 currentCount,
                 "Repository limit reached",
-                "Upgrade to BASIC plan to add repositories"
-        );
+                "Upgrade to BASIC plan to add repositories");
     }
 
     private LimitValidationResponse validateUserLimit(TenantEntity tenant, int currentCount) {
@@ -392,8 +394,7 @@ public class TenantServiceImpl implements TenantService {
                 tenant.getMaxUsers(),
                 currentCount,
                 "User limit reached",
-                "Upgrade to BASIC plan to invite more users"
-        );
+                "Upgrade to BASIC plan to invite more users");
     }
 
     private TenantDTO mapToDTO(TenantEntity entity) {

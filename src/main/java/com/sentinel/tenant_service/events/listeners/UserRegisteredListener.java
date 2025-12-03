@@ -22,21 +22,32 @@ public class UserRegisteredListener {
 
     /**
      * Consume evento auth.user.registered desde auth-service.
+     * 
+     * La queue "auth.user.registered.queue" se configura en RabbitMQListenerConfig.
      */
-    @RabbitListener(queues = "#{autoCreateQueue}")
+    @RabbitListener(queues = "auth.user.registered.queue")
     public void handleUserRegistered(Map<String, Object> event) {
         try {
-            log.info("Received auth.user.registered event");
+            log.info("Received auth.user.registered event: {}", event);
 
-            @SuppressWarnings("unchecked")
-            Map<String, Object> data = (Map<String, Object>) event.get("data");
+            String eventType = (String) event.get("eventType");
+            
+            if (!"auth.user.registered".equals(eventType)) {
+                log.warn("Unexpected event type: {}", eventType);
+                return;
+            }
 
-            String userIdStr = (String) data.get("userId");
-            String email = (String) data.get("email");
+            String userIdStr = (String) event.get("userId");
+            String email = (String) event.get("email");
+
+            if (userIdStr == null || email == null) {
+                log.error("Missing required fields in event: userId={}, email={}", userIdStr, email);
+                return;
+            }
 
             UUID userId = UUID.fromString(userIdStr);
 
-            log.info("Creating tenant for new user: {}", userId);
+            log.info("Creating tenant for new user: {} ({})", email, userId);
 
             tenantService.createTenantForUser(userId, email);
 
@@ -45,36 +56,7 @@ public class UserRegisteredListener {
         } catch (Exception e) {
             log.error("Error processing auth.user.registered event: {}", e.getMessage(), e);
             // TODO: Implementar retry logic o dead letter queue
+            throw e; // Re-lanzar para que RabbitMQ maneje el retry
         }
-    }
-
-    /**
-     * Bean para auto-crear la queue.
-     */
-    @org.springframework.context.annotation.Bean
-    public org.springframework.amqp.core.Queue autoCreateQueue() {
-        return new org.springframework.amqp.core.Queue("auth.user.registered.queue", true);
-    }
-
-    /**
-     * Binding entre exchange y queue.
-     */
-    @org.springframework.context.annotation.Bean
-    public org.springframework.amqp.core.Binding binding(
-            org.springframework.amqp.core.Queue autoCreateQueue,
-            org.springframework.amqp.core.TopicExchange authExchange
-    ) {
-        return org.springframework.amqp.core.BindingBuilder
-                .bind(autoCreateQueue)
-                .to(authExchange)
-                .with("auth.user.registered");
-    }
-
-    /**
-     * Declara el auth-exchange (debe existir en auth-service).
-     */
-    @org.springframework.context.annotation.Bean
-    public org.springframework.amqp.core.TopicExchange authExchange() {
-        return new org.springframework.amqp.core.TopicExchange("auth-exchange", true, false);
     }
 }
