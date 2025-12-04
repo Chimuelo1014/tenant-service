@@ -17431,3 +17431,2082 @@ This generated password is for development use only. Your security configuration
     where
         te1_0.owner_id=? 
         and te1_0.status=?
+2025-12-03T18:30:11.961-05:00  INFO 13552 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.8 with PID 13552 (C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service\target\classes started by USUARIO in C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service)
+2025-12-03T18:30:11.965-05:00 DEBUG 13552 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-03T18:30:11.965-05:00  INFO 13552 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-12-03T18:30:12.678-05:00  INFO 13552 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-03T18:30:12.732-05:00  INFO 13552 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2025-12-03T18:30:13.283-05:00  INFO 13552 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-03T18:30:13.297-05:00  INFO 13552 --- [tenant-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-03T18:30:13.334-05:00  INFO 13552 --- [tenant-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-03T18:30:13.374-05:00  INFO 13552 --- [tenant-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-03T18:30:13.376-05:00  INFO 13552 --- [tenant-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1371 ms
+2025-12-03T18:30:13.475-05:00  INFO 13552 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-03T18:30:13.631-05:00  INFO 13552 --- [tenant-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45592af7
+2025-12-03T18:30:13.634-05:00  INFO 13552 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-03T18:30:13.712-05:00  INFO 13552 --- [tenant-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-03T18:30:13.755-05:00  INFO 13552 --- [tenant-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-12-03T18:30:13.787-05:00  INFO 13552 --- [tenant-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-03T18:30:14.041-05:00  INFO 13552 --- [tenant-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-03T18:30:14.088-05:00  WARN 13552 --- [tenant-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-03T18:30:14.103-05:00  INFO 13552 --- [tenant-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-03T18:30:14.711-05:00  INFO 13552 --- [tenant-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-03T18:30:14.758-05:00  INFO 13552 --- [tenant-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T18:30:15.021-05:00  INFO 13552 --- [tenant-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-03T18:30:15.581-05:00  WARN 13552 --- [tenant-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-03T18:30:15.613-05:00  WARN 13552 --- [tenant-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4f732d4a-862e-4867-87d5-65a12626d03a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-03T18:30:15.619-05:00  INFO 13552 --- [tenant-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-03T18:30:16.027-05:00 DEBUG 13552 --- [tenant-service] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.sentinel.tenant_service.events.listeners.UserRegisteredListener.handleUserRegistered(java.util.Map) is java.util.Map<java.lang.String, java.lang.Object>
+2025-12-03T18:30:16.067-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2025-12-03T18:30:16.084-05:00  INFO 13552 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-12-03T18:30:16.085-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2025-12-03T18:30:16.087-05:00  INFO 13552 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-12-03T18:30:16.115-05:00  INFO 13552 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1f315f3d:0/SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2025-12-03T18:30:16.118-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2025-12-03T18:30:16.129-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-12-03T18:30:16.137-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x000002614fae77f0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2025-12-03T18:30:16.138-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'tenant-exchange'
+2025-12-03T18:30:16.141-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'auth-exchange'
+2025-12-03T18:30:16.145-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.created.queue'
+2025-12-03T18:30:16.154-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.upgraded.queue'
+2025-12-03T18:30:16.160-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'auth.user.registered.queue'
+2025-12-03T18:30:16.166-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.created.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.created]
+2025-12-03T18:30:16.171-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.upgraded.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.plan.upgraded]
+2025-12-03T18:30:16.175-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [auth.user.registered.queue (QUEUE)] to exchange [auth-exchange] with routing key [auth.user.registered]
+2025-12-03T18:30:16.180-05:00 DEBUG 13552 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2025-12-03T18:30:16.184-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x000002614faf5a58 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2025-12-03T18:30:16.188-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@2f42f20f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-03T18:30:16.199-05:00 DEBUG 13552 --- [tenant-service] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@2f42f20f: tags=[[amq.ctag-k_ZAso4PuU76VHv7mut1Zw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614], acknowledgeMode=AUTO local queue size=0
+2025-12-03T18:30:16.199-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'auth.user.registered.queue' with tag amq.ctag-k_ZAso4PuU76VHv7mut1Zw: Consumer@2f42f20f: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614], acknowledgeMode=AUTO local queue size=0
+2025-12-03T18:30:16.206-05:00  INFO 13552 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Started TenantServiceApplication in 4.646 seconds (process running for 4.903)
+2025-12-03T18:35:09.628-05:00 DEBUG 13552 --- [tenant-service] [pool-2-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Storing delivery for consumerTag: 'amq.ctag-k_ZAso4PuU76VHv7mut1Zw' with deliveryTag: '1' in Consumer@2f42f20f: tags=[[amq.ctag-k_ZAso4PuU76VHv7mut1Zw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614], acknowledgeMode=AUTO local queue size=0
+2025-12-03T18:35:09.643-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Received message: (Body:'[B@4aa44b4d(byte[172])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=auth-exchange, receivedRoutingKey=auth.user.registered, deliveryTag=1, consumerTag=amq.ctag-k_ZAso4PuU76VHv7mut1Zw, consumerQueue=auth.user.registered.queue])
+2025-12-03T18:35:09.645-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-03T18:35:09.645-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-03T18:35:09.646-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-03T18:35:09.676-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] .a.r.l.a.MessagingMessageListenerAdapter : Processing [GenericMessage [payload={globalRole=USER, eventType=auth.user.registered, userId=88cf5082-130b-482e-ba8c-069d2acd9493, email=test2@correo.com, timestamp=2025-12-03T18:35:09.502240}, headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedExchange=auth-exchange, amqp_deliveryTag=1, amqp_consumerQueue=auth.user.registered.queue, amqp_redelivered=false, __ContentTypeId__=java.lang.Object, amqp_receivedRoutingKey=auth.user.registered, amqp_contentEncoding=UTF-8, __KeyTypeId__=java.lang.Object, amqp_retryCount=0, id=5c1935c3-4f1b-14a4-2d8d-af5b5aaec09a, amqp_consumerTag=amq.ctag-k_ZAso4PuU76VHv7mut1Zw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=java.util.HashMap, timestamp=1764804909675}]]
+2025-12-03T18:35:09.677-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Received auth.user.registered event: {globalRole=USER, eventType=auth.user.registered, userId=88cf5082-130b-482e-ba8c-069d2acd9493, email=test2@correo.com, timestamp=2025-12-03T18:35:09.502240}
+2025-12-03T18:35:09.677-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Creating tenant for new user: test2@correo.com (88cf5082-130b-482e-ba8c-069d2acd9493)
+2025-12-03T18:35:09.684-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-creating tenant for new user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:09.718-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:09.752-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id 
+    from
+        tenants te1_0 
+    where
+        te1_0.slug=? 
+    fetch
+        first ? rows only
+2025-12-03T18:35:09.752-05:00 DEBUG 13552 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T18:35:09.788-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-tenant created with ID: 12ec52d9-2dfa-45d9-844b-b75d21b9df78 for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:09.788-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Publishing tenant.created event for tenant: 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T18:35:09.792-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:09.794-05:00 DEBUG 13552 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T18:35:09.795-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,2)
+2025-12-03T18:35:09.796-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitTemplate$$Lambda/0x000002614fba4928 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2025-12-03T18:35:09.796-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Publishing message [(Body:'[B@17926f89(byte[434])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=434, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [tenant-exchange], routingKey = [tenant.created]
+2025-12-03T18:35:09.800-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Event published: {eventId=c226b6be-b1c4-4ef4-bd8d-09ef03078d75, metadata={correlationId=5548814f-06b8-4b17-af80-ee4a16def11b, source=tenant-service}, data={tenantId=12ec52d9-2dfa-45d9-844b-b75d21b9df78, name=test2's Workspace, type=PERSONAL, userId=88cf5082-130b-482e-ba8c-069d2acd9493, plan=FREE, slug=test2s-workspace-88cf5082}, eventType=tenant.created, version=1.0, timestamp=2025-12-03T18:35:09.788431900}
+2025-12-03T18:35:09.817-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        tenants
+        (blockchain_enabled, business_name, created_at, current_domains, current_projects, current_repos, current_users, max_domains, max_projects, max_repos, max_users, name, next_billing_date, nit, owner_email, owner_id, plan, slug, status, subscription_id, type, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-03T18:35:09.822-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Tenant created successfully for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:12.357-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:12.360-05:00 DEBUG 13552 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T18:35:22.736-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:22.739-05:00 DEBUG 13552 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T18:35:22.744-05:00  INFO 13552 --- [tenant-service] [http-nio-8082-exec-9] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T18:35:22.745-05:00 DEBUG 13552 --- [tenant-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T18:45:55.670-05:00 DEBUG 13552 --- [tenant-service] [pool-2-thread-5] o.s.a.r.listener.BlockingQueueConsumer   : Storing delivery for consumerTag: 'amq.ctag-k_ZAso4PuU76VHv7mut1Zw' with deliveryTag: '2' in Consumer@2f42f20f: tags=[[amq.ctag-k_ZAso4PuU76VHv7mut1Zw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614], acknowledgeMode=AUTO local queue size=0
+2025-12-03T18:45:55.670-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Received message: (Body:'[B@5af60eea(byte[176])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=auth-exchange, receivedRoutingKey=auth.user.registered, deliveryTag=2, consumerTag=amq.ctag-k_ZAso4PuU76VHv7mut1Zw, consumerQueue=auth.user.registered.queue])
+2025-12-03T18:45:55.671-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] .a.r.l.a.MessagingMessageListenerAdapter : Processing [GenericMessage [payload={globalRole=USER, eventType=auth.user.registered, userId=365a4262-772c-4ced-bc1d-5cd36305f776, email=admin@example.com, timestamp=2025-12-03T18:45:55.667737900}, headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedExchange=auth-exchange, amqp_deliveryTag=2, amqp_consumerQueue=auth.user.registered.queue, amqp_redelivered=false, __ContentTypeId__=java.lang.Object, amqp_receivedRoutingKey=auth.user.registered, amqp_contentEncoding=UTF-8, __KeyTypeId__=java.lang.Object, amqp_retryCount=0, id=b3596f03-2f46-ecba-0293-a47b68203bdb, amqp_consumerTag=amq.ctag-k_ZAso4PuU76VHv7mut1Zw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=java.util.HashMap, timestamp=1764805555671}]]
+2025-12-03T18:45:55.671-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Received auth.user.registered event: {globalRole=USER, eventType=auth.user.registered, userId=365a4262-772c-4ced-bc1d-5cd36305f776, email=admin@example.com, timestamp=2025-12-03T18:45:55.667737900}
+2025-12-03T18:45:55.671-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Creating tenant for new user: admin@example.com (365a4262-772c-4ced-bc1d-5cd36305f776)
+2025-12-03T18:45:55.672-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-creating tenant for new user: 365a4262-772c-4ced-bc1d-5cd36305f776
+2025-12-03T18:45:55.673-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id 
+    from
+        tenants te1_0 
+    where
+        te1_0.slug=? 
+    fetch
+        first ? rows only
+2025-12-03T18:45:55.675-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-tenant created with ID: e88e2caf-a9bd-40f7-b3b4-d3bae9841326 for user: 365a4262-772c-4ced-bc1d-5cd36305f776
+2025-12-03T18:45:55.675-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Publishing tenant.created event for tenant: e88e2caf-a9bd-40f7-b3b4-d3bae9841326
+2025-12-03T18:45:55.675-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitTemplate$$Lambda/0x000002614fba4928 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@1cf5236d Shared Rabbit Connection: SimpleConnection@74f446ba [delegate=amqp://guest@127.0.0.1:5672/, localPort=57614]
+2025-12-03T18:45:55.676-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Publishing message [(Body:'[B@49e324b9(byte[434])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=434, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [tenant-exchange], routingKey = [tenant.created]
+2025-12-03T18:45:55.676-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Event published: {eventId=cd2955f2-e70a-4e3a-a1c2-bb280f76fa1d, metadata={correlationId=cee30581-1c02-4252-81da-f1ac415c7a3a, source=tenant-service}, data={tenantId=e88e2caf-a9bd-40f7-b3b4-d3bae9841326, name=admin's Workspace, type=PERSONAL, userId=365a4262-772c-4ced-bc1d-5cd36305f776, plan=FREE, slug=admins-workspace-365a4262}, eventType=tenant.created, version=1.0, timestamp=2025-12-03T18:45:55.675926900}
+2025-12-03T18:45:55.677-05:00 DEBUG 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        tenants
+        (blockchain_enabled, business_name, created_at, current_domains, current_projects, current_repos, current_users, max_domains, max_projects, max_repos, max_users, name, next_billing_date, nit, owner_email, owner_id, plan, slug, status, subscription_id, type, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-03T18:45:55.679-05:00  INFO 13552 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Tenant created successfully for user: 365a4262-772c-4ced-bc1d-5cd36305f776
+2025-12-03T19:23:46.714-05:00  INFO 23960 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.8 with PID 23960 (C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service\target\classes started by USUARIO in C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service)
+2025-12-03T19:23:46.716-05:00 DEBUG 23960 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-03T19:23:46.716-05:00  INFO 23960 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-12-03T19:23:47.423-05:00  INFO 23960 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-03T19:23:47.480-05:00  INFO 23960 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
+2025-12-03T19:23:47.992-05:00  INFO 23960 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-03T19:23:48.005-05:00  INFO 23960 --- [tenant-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-03T19:23:48.005-05:00  INFO 23960 --- [tenant-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-03T19:23:48.048-05:00  INFO 23960 --- [tenant-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-03T19:23:48.048-05:00  INFO 23960 --- [tenant-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1297 ms
+2025-12-03T19:23:48.139-05:00  INFO 23960 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-03T19:23:48.317-05:00  INFO 23960 --- [tenant-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30a7653e
+2025-12-03T19:23:48.319-05:00  INFO 23960 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-03T19:23:48.408-05:00  INFO 23960 --- [tenant-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-03T19:23:48.456-05:00  INFO 23960 --- [tenant-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-12-03T19:23:48.479-05:00  INFO 23960 --- [tenant-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-03T19:23:48.707-05:00  INFO 23960 --- [tenant-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-03T19:23:48.756-05:00  WARN 23960 --- [tenant-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-03T19:23:48.771-05:00  INFO 23960 --- [tenant-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-03T19:23:49.335-05:00  INFO 23960 --- [tenant-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-03T19:23:49.382-05:00  INFO 23960 --- [tenant-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T19:23:49.647-05:00  INFO 23960 --- [tenant-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-03T19:23:50.243-05:00  WARN 23960 --- [tenant-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-03T19:23:50.270-05:00  WARN 23960 --- [tenant-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6d3fb81c-2817-4c84-9a5e-2b4ff23ab907
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-03T19:23:50.278-05:00  INFO 23960 --- [tenant-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-03T19:23:50.724-05:00 DEBUG 23960 --- [tenant-service] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.sentinel.tenant_service.events.listeners.UserRegisteredListener.handleUserRegistered(java.util.Map) is java.util.Map<java.lang.String, java.lang.Object>
+2025-12-03T19:23:50.735-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2025-12-03T19:23:50.757-05:00  INFO 23960 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-12-03T19:23:50.758-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2025-12-03T19:23:50.760-05:00  INFO 23960 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-12-03T19:23:50.789-05:00  INFO 23960 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2fc2d1f0:0/SimpleConnection@6162d87c [delegate=amqp://guest@127.0.0.1:5672/, localPort=54984]
+2025-12-03T19:23:50.792-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2025-12-03T19:23:50.800-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-12-03T19:23:50.806-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x000002b981ae7128 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3af8f1ef Shared Rabbit Connection: SimpleConnection@6162d87c [delegate=amqp://guest@127.0.0.1:5672/, localPort=54984]
+2025-12-03T19:23:50.807-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'tenant-exchange'
+2025-12-03T19:23:50.810-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'auth-exchange'
+2025-12-03T19:23:50.811-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.created.queue'
+2025-12-03T19:23:50.815-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.upgraded.queue'
+2025-12-03T19:23:50.816-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'auth.user.registered.queue'
+2025-12-03T19:23:50.817-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.created.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.created]
+2025-12-03T19:23:50.820-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.upgraded.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.plan.upgraded]
+2025-12-03T19:23:50.822-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [auth.user.registered.queue (QUEUE)] to exchange [auth-exchange] with routing key [auth.user.registered]
+2025-12-03T19:23:50.824-05:00 DEBUG 23960 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2025-12-03T19:23:50.828-05:00 DEBUG 23960 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x000002b981af5368 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3af8f1ef Shared Rabbit Connection: SimpleConnection@6162d87c [delegate=amqp://guest@127.0.0.1:5672/, localPort=54984]
+2025-12-03T19:23:50.832-05:00 DEBUG 23960 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@2108d503: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-03T19:23:50.845-05:00 DEBUG 23960 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'auth.user.registered.queue' with tag amq.ctag-oDKqmNKsx1l9rj7x88aKTw: Consumer@2108d503: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3af8f1ef Shared Rabbit Connection: SimpleConnection@6162d87c [delegate=amqp://guest@127.0.0.1:5672/, localPort=54984], acknowledgeMode=AUTO local queue size=0
+2025-12-03T19:23:50.845-05:00 DEBUG 23960 --- [tenant-service] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@2108d503: tags=[[amq.ctag-oDKqmNKsx1l9rj7x88aKTw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@3af8f1ef Shared Rabbit Connection: SimpleConnection@6162d87c [delegate=amqp://guest@127.0.0.1:5672/, localPort=54984], acknowledgeMode=AUTO local queue size=0
+2025-12-03T19:23:50.850-05:00  INFO 23960 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Started TenantServiceApplication in 4.54 seconds (process running for 4.793)
+2025-12-03T19:24:11.055-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-03T19:24:11.055-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-03T19:24:11.056-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-12-03T19:24:11.120-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T19:24:11.211-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:24:11.305-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-4] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T19:24:11.307-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:24:45.339-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T19:24:45.341-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:24:45.347-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T19:24:45.349-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:25:33.597-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.controller.TenantController        : Fetching tenants for user: 565c1b8b-58ef-4c08-aa22-d37fcf08824a
+2025-12-03T19:25:33.599-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:25:33.604-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.controller.TenantController        : Fetching tenants for user: 565c1b8b-58ef-4c08-aa22-d37fcf08824a
+2025-12-03T19:25:33.606-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T19:25:42.270-05:00  INFO 23960 --- [tenant-service] [http-nio-8082-exec-4] c.s.t.controller.TenantController        : Fetching tenants for user: 565c1b8b-58ef-4c08-aa22-d37fcf08824a
+2025-12-03T19:25:42.272-05:00 DEBUG 23960 --- [tenant-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:28:42.124-05:00  INFO 15400 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.8 with PID 15400 (C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service\target\classes started by USUARIO in C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service)
+2025-12-03T21:28:42.127-05:00 DEBUG 15400 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-03T21:28:42.127-05:00  INFO 15400 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-12-03T21:28:43.031-05:00  INFO 15400 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-03T21:28:43.104-05:00  INFO 15400 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interface.
+2025-12-03T21:28:43.790-05:00  INFO 15400 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-03T21:28:43.809-05:00  INFO 15400 --- [tenant-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-03T21:28:43.810-05:00  INFO 15400 --- [tenant-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-03T21:28:43.895-05:00  INFO 15400 --- [tenant-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-03T21:28:43.896-05:00  INFO 15400 --- [tenant-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1718 ms
+2025-12-03T21:28:44.034-05:00  INFO 15400 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-03T21:28:44.285-05:00  INFO 15400 --- [tenant-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7197b07f
+2025-12-03T21:28:44.287-05:00  INFO 15400 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-03T21:28:44.395-05:00  INFO 15400 --- [tenant-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-03T21:28:44.452-05:00  INFO 15400 --- [tenant-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-12-03T21:28:44.484-05:00  INFO 15400 --- [tenant-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-03T21:28:44.766-05:00  INFO 15400 --- [tenant-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-03T21:28:44.828-05:00  WARN 15400 --- [tenant-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-03T21:28:44.844-05:00  INFO 15400 --- [tenant-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-03T21:28:45.574-05:00  INFO 15400 --- [tenant-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-03T21:28:45.627-05:00  INFO 15400 --- [tenant-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T21:28:45.868-05:00  INFO 15400 --- [tenant-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-03T21:28:46.665-05:00  WARN 15400 --- [tenant-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-03T21:28:46.700-05:00  WARN 15400 --- [tenant-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d45d2b4c-8c9a-42b1-aec6-9ab1d3cfccc2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-03T21:28:46.709-05:00  INFO 15400 --- [tenant-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-03T21:28:47.230-05:00 DEBUG 15400 --- [tenant-service] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.sentinel.tenant_service.events.listeners.UserRegisteredListener.handleUserRegistered(java.util.Map) is java.util.Map<java.lang.String, java.lang.Object>
+2025-12-03T21:28:47.249-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2025-12-03T21:28:47.285-05:00  INFO 15400 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-12-03T21:28:47.287-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2025-12-03T21:28:47.290-05:00  INFO 15400 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-12-03T21:28:47.348-05:00  INFO 15400 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#53fa630:0/SimpleConnection@74239871 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65474]
+2025-12-03T21:28:47.352-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2025-12-03T21:28:47.364-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-12-03T21:28:47.374-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x0000021510afbee0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@13437ce5 Shared Rabbit Connection: SimpleConnection@74239871 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65474]
+2025-12-03T21:28:47.375-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'tenant-exchange'
+2025-12-03T21:28:47.381-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'auth-exchange'
+2025-12-03T21:28:47.384-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.created.queue'
+2025-12-03T21:28:47.392-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.upgraded.queue'
+2025-12-03T21:28:47.394-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'auth.user.registered.queue'
+2025-12-03T21:28:47.397-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.created.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.created]
+2025-12-03T21:28:47.409-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.upgraded.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.plan.upgraded]
+2025-12-03T21:28:47.411-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [auth.user.registered.queue (QUEUE)] to exchange [auth-exchange] with routing key [auth.user.registered]
+2025-12-03T21:28:47.414-05:00 DEBUG 15400 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2025-12-03T21:28:47.421-05:00 DEBUG 15400 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x0000021510b05000 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@13437ce5 Shared Rabbit Connection: SimpleConnection@74239871 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65474]
+2025-12-03T21:28:47.427-05:00 DEBUG 15400 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@62267a22: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:28:47.442-05:00 DEBUG 15400 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'auth.user.registered.queue' with tag amq.ctag-PWG_G44O1zyYFlvKUP_sHg: Consumer@62267a22: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@13437ce5 Shared Rabbit Connection: SimpleConnection@74239871 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65474], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:28:47.442-05:00 DEBUG 15400 --- [tenant-service] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@62267a22: tags=[[amq.ctag-PWG_G44O1zyYFlvKUP_sHg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@13437ce5 Shared Rabbit Connection: SimpleConnection@74239871 [delegate=amqp://guest@127.0.0.1:5672/, localPort=65474], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:28:47.451-05:00  INFO 15400 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Started TenantServiceApplication in 5.801 seconds (process running for 6.136)
+2025-12-03T21:29:16.954-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-03T21:29:16.954-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-03T21:29:16.955-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-03T21:29:17.029-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:29:17.104-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:29:17.206-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:29:17.208-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:35:10.461-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-10] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:35:10.464-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:53:05.160-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:53:05.163-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:53:05.169-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-4] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:53:05.170-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:53:12.507-05:00  INFO 15400 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:53:12.509-05:00 DEBUG 15400 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:53:37.730-05:00  INFO 11836 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Starting TenantServiceApplication using Java 21.0.8 with PID 11836 (C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service\target\classes started by USUARIO in C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\tenant-service)
+2025-12-03T21:53:37.732-05:00 DEBUG 11836 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Running with Spring Boot v3.5.8, Spring v6.2.14
+2025-12-03T21:53:37.733-05:00  INFO 11836 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-12-03T21:53:38.516-05:00  INFO 11836 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-03T21:53:38.591-05:00  INFO 11836 --- [tenant-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2025-12-03T21:53:39.236-05:00  INFO 11836 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-12-03T21:53:39.252-05:00  INFO 11836 --- [tenant-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-03T21:53:39.253-05:00  INFO 11836 --- [tenant-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-03T21:53:39.299-05:00  INFO 11836 --- [tenant-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-03T21:53:39.299-05:00  INFO 11836 --- [tenant-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1525 ms
+2025-12-03T21:53:39.405-05:00  INFO 11836 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-03T21:53:39.774-05:00  INFO 11836 --- [tenant-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@241fbec
+2025-12-03T21:53:39.776-05:00  INFO 11836 --- [tenant-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-03T21:53:39.872-05:00  INFO 11836 --- [tenant-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-03T21:53:39.923-05:00  INFO 11836 --- [tenant-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-12-03T21:53:39.963-05:00  INFO 11836 --- [tenant-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-03T21:53:40.268-05:00  INFO 11836 --- [tenant-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-03T21:53:40.328-05:00  WARN 11836 --- [tenant-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-03T21:53:40.343-05:00  INFO 11836 --- [tenant-service] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-03T21:53:41.067-05:00  INFO 11836 --- [tenant-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-03T21:53:41.113-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create table tenant_invitations (
+        id uuid not null,
+        accepted_at timestamp(6),
+        created_at timestamp(6),
+        expires_at timestamp(6) not null,
+        invitation_token varchar(64) not null,
+        invited_by_email varchar(255) not null,
+        invited_by_user_id uuid not null,
+        invited_email varchar(255) not null,
+        invited_user_id uuid,
+        rejected_at timestamp(6),
+        role varchar(20) not null check (role in ('TENANT_ADMIN','TENANT_USER','TENANT_VIEWER')),
+        status varchar(20) not null check (status in ('PENDING','ACCEPTED','REJECTED','CANCELLED','EXPIRED')),
+        tenant_id uuid not null,
+        tenant_name varchar(255) not null,
+        updated_at timestamp(6),
+        primary key (id)
+    )
+2025-12-03T21:53:41.123-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create table tenant_members (
+        id uuid not null,
+        created_at timestamp(6),
+        is_owner boolean,
+        joined_at timestamp(6),
+        role varchar(20) not null check (role in ('TENANT_ADMIN','TENANT_USER','TENANT_VIEWER')),
+        tenant_id uuid not null,
+        updated_at timestamp(6),
+        user_email varchar(255) not null,
+        user_id uuid not null,
+        primary key (id)
+    )
+2025-12-03T21:53:41.127-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_invitations_email 
+       on tenant_invitations (invited_email)
+2025-12-03T21:53:41.128-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_invitations_tenant 
+       on tenant_invitations (tenant_id)
+2025-12-03T21:53:41.131-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_invitations_token 
+       on tenant_invitations (invitation_token)
+2025-12-03T21:53:41.133-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_invitations_status 
+       on tenant_invitations (status)
+2025-12-03T21:53:41.135-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    alter table if exists tenant_invitations 
+       drop constraint if exists UK9sspx3fil6xfqj7lvaecyquq7
+2025-12-03T21:53:41.136-05:00  WARN 11836 --- [tenant-service] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-12-03T21:53:41.136-05:00  WARN 11836 --- [tenant-service] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : no existe la restricción «uk9sspx3fil6xfqj7lvaecyquq7» en la relación «tenant_invitations», omitiendo
+2025-12-03T21:53:41.138-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    alter table if exists tenant_invitations 
+       add constraint UK9sspx3fil6xfqj7lvaecyquq7 unique (invitation_token)
+2025-12-03T21:53:41.140-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_members_tenant 
+       on tenant_members (tenant_id)
+2025-12-03T21:53:41.141-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_members_user 
+       on tenant_members (user_id)
+2025-12-03T21:53:41.144-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    create index idx_members_role 
+       on tenant_members (role)
+2025-12-03T21:53:41.146-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    alter table if exists tenant_members 
+       drop constraint if exists UK27wct6pokq0ddegorg4jpbiik
+2025-12-03T21:53:41.147-05:00  WARN 11836 --- [tenant-service] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-12-03T21:53:41.147-05:00  WARN 11836 --- [tenant-service] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : no existe la restricción «uk27wct6pokq0ddegorg4jpbiik» en la relación «tenant_members», omitiendo
+2025-12-03T21:53:41.147-05:00 DEBUG 11836 --- [tenant-service] [main] org.hibernate.SQL                        : 
+    alter table if exists tenant_members 
+       add constraint UK27wct6pokq0ddegorg4jpbiik unique (tenant_id, user_id)
+2025-12-03T21:53:41.157-05:00  INFO 11836 --- [tenant-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-03T21:53:41.428-05:00  INFO 11836 --- [tenant-service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-03T21:53:42.223-05:00  WARN 11836 --- [tenant-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-03T21:53:42.253-05:00  WARN 11836 --- [tenant-service] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a2f567e3-b153-4ebd-af6e-90a7d8081c6b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-03T21:53:42.264-05:00  INFO 11836 --- [tenant-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-03T21:53:42.703-05:00 DEBUG 11836 --- [tenant-service] [main] .a.r.l.a.MessagingMessageListenerAdapter : Inferred argument type for public void com.sentinel.tenant_service.events.listeners.UserRegisteredListener.handleUserRegistered(java.util.Map) is java.util.Map<java.lang.String, java.lang.Object>
+2025-12-03T21:53:42.717-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : No global properties bean
+2025-12-03T21:53:42.737-05:00  INFO 11836 --- [tenant-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-12-03T21:53:42.739-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.a.r.l.SimpleMessageListenerContainer : Starting Rabbit listener container.
+2025-12-03T21:53:42.742-05:00  INFO 11836 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2025-12-03T21:53:42.776-05:00  INFO 11836 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7951a08c:0/SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061]
+2025-12-03T21:53:42.784-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Initializing declarations
+2025-12-03T21:53:42.797-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-12-03T21:53:42.807-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x0000022a83af4db8 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061]
+2025-12-03T21:53:42.808-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'tenant-exchange'
+2025-12-03T21:53:42.813-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Exchange 'auth-exchange'
+2025-12-03T21:53:42.815-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.created.queue'
+2025-12-03T21:53:42.823-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'tenant.upgraded.queue'
+2025-12-03T21:53:42.825-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : declaring Queue 'auth.user.registered.queue'
+2025-12-03T21:53:42.826-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.created.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.created]
+2025-12-03T21:53:42.832-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [tenant.upgraded.queue (QUEUE)] to exchange [tenant-exchange] with routing key [tenant.plan.upgraded]
+2025-12-03T21:53:42.834-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Binding destination [auth.user.registered.queue (QUEUE)] to exchange [auth-exchange] with routing key [auth.user.registered]
+2025-12-03T21:53:42.837-05:00 DEBUG 11836 --- [tenant-service] [main] o.s.amqp.rabbit.core.RabbitAdmin         : Declarations finished
+2025-12-03T21:53:42.843-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitAdmin$$Lambda/0x0000022a83afb078 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061]
+2025-12-03T21:53:42.848-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Starting consumer Consumer@62041e5f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:53:42.862-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Started on queue 'auth.user.registered.queue' with tag amq.ctag-ZuA-K8soLKHBrreVWtP0mg: Consumer@62041e5f: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:53:42.862-05:00 DEBUG 11836 --- [tenant-service] [pool-2-thread-3] o.s.a.r.listener.BlockingQueueConsumer   : ConsumeOK: Consumer@62041e5f: tags=[[amq.ctag-ZuA-K8soLKHBrreVWtP0mg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:53:42.868-05:00  INFO 11836 --- [tenant-service] [main] c.s.t.TenantServiceApplication           : Started TenantServiceApplication in 5.61 seconds (process running for 5.91)
+2025-12-03T21:54:03.778-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-03T21:54:03.778-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-03T21:54:03.779-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-03T21:54:03.856-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:54:03.858-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.c.TenantInvitationController       : Getting pending invitations for: test2@correo.com
+2025-12-03T21:54:03.859-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: test2@correo.com
+2025-12-03T21:54:03.921-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:54:03.921-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:54:03.970-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.c.TenantInvitationController       : Getting pending invitations for: test2@correo.com
+2025-12-03T21:54:03.970-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: test2@correo.com
+2025-12-03T21:54:03.971-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:54:04.001-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:54:04.003-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:54:06.722-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-9] c.s.t.controller.TenantController        : Fetching tenants for user: 88cf5082-130b-482e-ba8c-069d2acd9493
+2025-12-03T21:54:06.725-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:54:16.087-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.c.TenantInvitationController       : Inviting member to tenant: 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:16.088-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.s.i.TenantInvitationServiceImpl    : Inviting member samuqs20@gmail.com to tenant 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:16.100-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.id=?
+2025-12-03T21:54:16.122-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        case 
+            when count(tme1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    tenant_members tme1_0 
+where
+    tme1_0.tenant_id=? 
+    and tme1_0.user_id=? 
+    and (
+        tme1_0.is_owner=true 
+        or tme1_0.role='TENANT_ADMIN'
+    )
+2025-12-03T21:54:31.168-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.c.TenantInvitationController       : Inviting member to tenant: 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:31.169-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.s.i.TenantInvitationServiceImpl    : Inviting member samuelqs66@gmail.com to tenant 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:31.170-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.id=?
+2025-12-03T21:54:31.171-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        case 
+            when count(tme1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    tenant_members tme1_0 
+where
+    tme1_0.tenant_id=? 
+    and tme1_0.user_id=? 
+    and (
+        tme1_0.is_owner=true 
+        or tme1_0.role='TENANT_ADMIN'
+    )
+2025-12-03T21:54:36.800-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.c.TenantInvitationController       : Inviting member to tenant: 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:36.801-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.s.i.TenantInvitationServiceImpl    : Inviting member samuelqs66@gmail.com to tenant 12ec52d9-2dfa-45d9-844b-b75d21b9df78
+2025-12-03T21:54:36.801-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.id=?
+2025-12-03T21:54:36.806-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        case 
+            when count(tme1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    tenant_members tme1_0 
+where
+    tme1_0.tenant_id=? 
+    and tme1_0.user_id=? 
+    and (
+        tme1_0.is_owner=true 
+        or tme1_0.role='TENANT_ADMIN'
+    )
+2025-12-03T21:56:11.798-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testi@correo.com
+2025-12-03T21:56:11.798-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:11.799-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testi@correo.com
+2025-12-03T21:56:11.799-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:56:11.801-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:11.804-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testi@correo.com
+2025-12-03T21:56:11.805-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testi@correo.com
+2025-12-03T21:56:11.805-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-4] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:11.807-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:56:11.808-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:11.836-05:00 DEBUG 11836 --- [tenant-service] [pool-2-thread-4] o.s.a.r.listener.BlockingQueueConsumer   : Storing delivery for consumerTag: 'amq.ctag-ZuA-K8soLKHBrreVWtP0mg' with deliveryTag: '1' in Consumer@62041e5f: tags=[[amq.ctag-ZuA-K8soLKHBrreVWtP0mg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:56:11.845-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Received message: (Body:'[B@3f6ca06a(byte[172])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=auth-exchange, receivedRoutingKey=auth.user.registered, deliveryTag=1, consumerTag=amq.ctag-ZuA-K8soLKHBrreVWtP0mg, consumerQueue=auth.user.registered.queue])
+2025-12-03T21:56:11.860-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] .a.r.l.a.MessagingMessageListenerAdapter : Processing [GenericMessage [payload={globalRole=USER, eventType=auth.user.registered, userId=47c9adb5-0f33-42d9-93c3-8c1eb752fbc7, email=testi@correo.com, timestamp=2025-12-03T21:56:11.719972}, headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedExchange=auth-exchange, amqp_deliveryTag=1, amqp_consumerQueue=auth.user.registered.queue, amqp_redelivered=false, __ContentTypeId__=java.lang.Object, amqp_receivedRoutingKey=auth.user.registered, amqp_contentEncoding=UTF-8, __KeyTypeId__=java.lang.Object, amqp_retryCount=0, id=7589248b-15bd-8b30-9b23-1626f7de047d, amqp_consumerTag=amq.ctag-ZuA-K8soLKHBrreVWtP0mg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=java.util.HashMap, timestamp=1764816971859}]]
+2025-12-03T21:56:11.861-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Received auth.user.registered event: {globalRole=USER, eventType=auth.user.registered, userId=47c9adb5-0f33-42d9-93c3-8c1eb752fbc7, email=testi@correo.com, timestamp=2025-12-03T21:56:11.719972}
+2025-12-03T21:56:11.862-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Creating tenant for new user: testi@correo.com (47c9adb5-0f33-42d9-93c3-8c1eb752fbc7)
+2025-12-03T21:56:11.862-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-creating tenant for new user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:11.864-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id 
+    from
+        tenants te1_0 
+    where
+        te1_0.slug=? 
+    fetch
+        first ? rows only
+2025-12-03T21:56:11.874-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-tenant created with ID: bc0c7a9c-5cb6-4da3-a7b4-2f9910d745af for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:11.875-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Publishing tenant.created event for tenant: bc0c7a9c-5cb6-4da3-a7b4-2f9910d745af
+2025-12-03T21:56:11.879-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,2)
+2025-12-03T21:56:11.879-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitTemplate$$Lambda/0x0000022a83c04ee0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061]
+2025-12-03T21:56:11.879-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Publishing message [(Body:'[B@22cdc8d1(byte[434])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=434, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [tenant-exchange], routingKey = [tenant.created]
+2025-12-03T21:56:11.883-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Event published: {eventId=38f3f668-f73d-455f-a25f-adddbe979ed1, metadata={correlationId=237748a1-ac92-4b22-b9cd-95eb5a873c18, source=tenant-service}, data={tenantId=bc0c7a9c-5cb6-4da3-a7b4-2f9910d745af, name=testi's Workspace, type=PERSONAL, userId=47c9adb5-0f33-42d9-93c3-8c1eb752fbc7, plan=FREE, slug=testis-workspace-47c9adb5}, eventType=tenant.created, version=1.0, timestamp=2025-12-03T21:56:11.875856400}
+2025-12-03T21:56:11.894-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        tenants
+        (blockchain_enabled, business_name, created_at, current_domains, current_projects, current_repos, current_users, max_domains, max_projects, max_repos, max_users, name, next_billing_date, nit, owner_email, owner_id, plan, slug, status, subscription_id, type, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-03T21:56:11.898-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Tenant created successfully for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:13.458-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:13.461-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:16.403-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:56:16.405-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:51.521-05:00 DEBUG 11836 --- [tenant-service] [pool-2-thread-5] o.s.a.r.listener.BlockingQueueConsumer   : Storing delivery for consumerTag: 'amq.ctag-ZuA-K8soLKHBrreVWtP0mg' with deliveryTag: '2' in Consumer@62041e5f: tags=[[amq.ctag-ZuA-K8soLKHBrreVWtP0mg]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061], acknowledgeMode=AUTO local queue size=0
+2025-12-03T21:56:51.522-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.listener.BlockingQueueConsumer   : Received message: (Body:'[B@36b8f178(byte[175])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=auth-exchange, receivedRoutingKey=auth.user.registered, deliveryTag=2, consumerTag=amq.ctag-ZuA-K8soLKHBrreVWtP0mg, consumerQueue=auth.user.registered.queue])
+2025-12-03T21:56:51.522-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] .a.r.l.a.MessagingMessageListenerAdapter : Processing [GenericMessage [payload={globalRole=USER, eventType=auth.user.registered, userId=9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc, email=testo@correo.com, timestamp=2025-12-03T21:56:51.517358600}, headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedExchange=auth-exchange, amqp_deliveryTag=2, amqp_consumerQueue=auth.user.registered.queue, amqp_redelivered=false, __ContentTypeId__=java.lang.Object, amqp_receivedRoutingKey=auth.user.registered, amqp_contentEncoding=UTF-8, __KeyTypeId__=java.lang.Object, amqp_retryCount=0, id=3d7e0f1e-f7a8-893a-6373-5fac94ed6dc4, amqp_consumerTag=amq.ctag-ZuA-K8soLKHBrreVWtP0mg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=java.util.HashMap, timestamp=1764817011522}]]
+2025-12-03T21:56:51.523-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Received auth.user.registered event: {globalRole=USER, eventType=auth.user.registered, userId=9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc, email=testo@correo.com, timestamp=2025-12-03T21:56:51.517358600}
+2025-12-03T21:56:51.523-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Creating tenant for new user: testo@correo.com (9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc)
+2025-12-03T21:56:51.524-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-creating tenant for new user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:51.525-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id 
+    from
+        tenants te1_0 
+    where
+        te1_0.slug=? 
+    fetch
+        first ? rows only
+2025-12-03T21:56:51.527-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.service.impl.TenantServiceImpl     : Auto-tenant created with ID: 495c430a-3892-46bd-8c41-b9938f3d533c for user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:51.527-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Publishing tenant.created event for tenant: 495c430a-3892-46bd-8c41-b9938f3d533c
+2025-12-03T21:56:51.528-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Executing callback RabbitTemplate$$Lambda/0x0000022a83c04ee0 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,2), conn: Proxy@54d0724f Shared Rabbit Connection: SimpleConnection@5d33426a [delegate=amqp://guest@127.0.0.1:5672/, localPort=63061]
+2025-12-03T21:56:51.529-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.amqp.rabbit.core.RabbitTemplate      : Publishing message [(Body:'[B@7642c9f4(byte[431])' MessageProperties [headers={__ContentTypeId__=java.lang.Object, __KeyTypeId__=java.lang.Object, __TypeId__=java.util.HashMap}, contentType=application/json, contentEncoding=UTF-8, contentLength=431, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [tenant-exchange], routingKey = [tenant.created]
+2025-12-03T21:56:51.529-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.events.TenantEventPublisher        : Event published: {eventId=7796b8ae-de02-4075-97a8-78fe9d82715e, metadata={correlationId=671d4420-c36d-4c0e-8415-96d376373c9d, source=tenant-service}, data={tenantId=495c430a-3892-46bd-8c41-b9938f3d533c, name=testo's Workspace, type=PERSONAL, userId=9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc, plan=FREE, slug=testos-workspace-9a0b559d}, eventType=tenant.created, version=1.0, timestamp=2025-12-03T21:56:51.527947}
+2025-12-03T21:56:51.531-05:00 DEBUG 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        tenants
+        (blockchain_enabled, business_name, created_at, current_domains, current_projects, current_repos, current_users, max_domains, max_projects, max_repos, max_users, name, next_billing_date, nit, owner_email, owner_id, plan, slug, status, subscription_id, type, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-03T21:56:51.533-05:00  INFO 11836 --- [tenant-service] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.s.t.e.l.UserRegisteredListener         : Tenant created successfully for user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:51.541-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:51.541-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testo@correo.com
+2025-12-03T21:56:51.542-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testo@correo.com
+2025-12-03T21:56:51.542-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:56:51.543-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:51.546-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testo@correo.com
+2025-12-03T21:56:51.547-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testo@correo.com
+2025-12-03T21:56:51.547-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:56:51.548-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:51.549-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:56:54.126-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.controller.TenantController        : Fetching tenants for user: 9a0b559d-b37c-40e7-bd56-4d3c4f86ccdc
+2025-12-03T21:56:54.129-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:57:05.201-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.c.TenantInvitationController       : Inviting member to tenant: 495c430a-3892-46bd-8c41-b9938f3d533c
+2025-12-03T21:57:05.203-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.s.i.TenantInvitationServiceImpl    : Inviting member testi@correo.com to tenant 495c430a-3892-46bd-8c41-b9938f3d533c
+2025-12-03T21:57:05.203-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.id=?
+2025-12-03T21:57:05.204-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        case 
+            when count(tme1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    tenant_members tme1_0 
+where
+    tme1_0.tenant_id=? 
+    and tme1_0.user_id=? 
+    and (
+        tme1_0.is_owner=true 
+        or tme1_0.role='TENANT_ADMIN'
+    )
+2025-12-03T21:58:43.613-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testi@correo.com
+2025-12-03T21:58:43.613-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:43.613-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testi@correo.com
+2025-12-03T21:58:43.614-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:58:43.615-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:43.619-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.c.TenantInvitationController       : Getting pending invitations for: testi@correo.com
+2025-12-03T21:58:43.619-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-9] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:43.619-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.s.i.TenantInvitationServiceImpl    : Getting pending invitations for: testi@correo.com
+2025-12-03T21:58:43.619-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        tie1_0.id,
+        tie1_0.accepted_at,
+        tie1_0.created_at,
+        tie1_0.expires_at,
+        tie1_0.invitation_token,
+        tie1_0.invited_by_email,
+        tie1_0.invited_by_user_id,
+        tie1_0.invited_email,
+        tie1_0.invited_user_id,
+        tie1_0.rejected_at,
+        tie1_0.role,
+        tie1_0.status,
+        tie1_0.tenant_id,
+        tie1_0.tenant_name,
+        tie1_0.updated_at 
+    from
+        tenant_invitations tie1_0 
+    where
+        tie1_0.invited_email=? 
+        and tie1_0.status=? 
+        and tie1_0.expires_at>?
+2025-12-03T21:58:43.620-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-9] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:45.610-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-10] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:45.613-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:46.099-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-8] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:46.101-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-8] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:46.428-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-2] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:46.429-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-2] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:46.602-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-3] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:46.606-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-3] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:46.770-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-4] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:46.773-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-4] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:46.930-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-1] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:46.933-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-1] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:47.076-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-7] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:47.077-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-7] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:47.259-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-5] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:47.284-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-5] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:58:47.428-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-6] c.s.t.controller.TenantController        : Fetching tenants for user: 47c9adb5-0f33-42d9-93c3-8c1eb752fbc7
+2025-12-03T21:58:47.431-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-6] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.owner_id=? 
+        and te1_0.status=?
+2025-12-03T21:59:25.915-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-10] c.s.t.c.TenantInvitationController       : Inviting member to tenant: bc0c7a9c-5cb6-4da3-a7b4-2f9910d745af
+2025-12-03T21:59:25.916-05:00  INFO 11836 --- [tenant-service] [http-nio-8082-exec-10] c.s.t.s.i.TenantInvitationServiceImpl    : Inviting member testo@correo.com to tenant bc0c7a9c-5cb6-4da3-a7b4-2f9910d745af
+2025-12-03T21:59:25.916-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        te1_0.id,
+        te1_0.blockchain_enabled,
+        te1_0.business_name,
+        te1_0.created_at,
+        te1_0.current_domains,
+        te1_0.current_projects,
+        te1_0.current_repos,
+        te1_0.current_users,
+        te1_0.max_domains,
+        te1_0.max_projects,
+        te1_0.max_repos,
+        te1_0.max_users,
+        te1_0.name,
+        te1_0.next_billing_date,
+        te1_0.nit,
+        te1_0.owner_email,
+        te1_0.owner_id,
+        te1_0.plan,
+        te1_0.slug,
+        te1_0.status,
+        te1_0.subscription_id,
+        te1_0.type,
+        te1_0.updated_at 
+    from
+        tenants te1_0 
+    where
+        te1_0.id=?
+2025-12-03T21:59:25.918-05:00 DEBUG 11836 --- [tenant-service] [http-nio-8082-exec-10] org.hibernate.SQL                        : 
+    select
+        case 
+            when count(tme1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    tenant_members tme1_0 
+where
+    tme1_0.tenant_id=? 
+    and tme1_0.user_id=? 
+    and (
+        tme1_0.is_owner=true 
+        or tme1_0.role='TENANT_ADMIN'
+    )
