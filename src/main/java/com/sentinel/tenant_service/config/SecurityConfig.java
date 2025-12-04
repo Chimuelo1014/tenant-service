@@ -11,17 +11,23 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.List;
 
 @Configuration
-public class CorsConfig {
+public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
         http
-                .csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/**").permitAll()
-                );
+            .csrf(csrf -> csrf.disable())
+            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+            .authorizeHttpRequests(auth -> auth
+                // Endpoints internos sin autenticación (para Feign)
+                .requestMatchers("/api/tenants/internal/**").permitAll()
+                
+                // Actuator para health checks
+                .requestMatchers("/actuator/health").permitAll()
+                
+                // TODO: Resto requiere autenticación JWT
+                .requestMatchers("/**").permitAll() // Temporal - sin JWT
+            );
 
         return http.build();
     }
@@ -29,26 +35,14 @@ public class CorsConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-
-        // Origen del frontend
         config.setAllowedOrigins(List.of("http://localhost:3000"));
-
-        // Métodos permitidos
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-
-        // Headers permitidos (preflight approval)
         config.setAllowedHeaders(List.of("*"));
-
-        // Exponer headers al frontend
         config.setExposedHeaders(List.of("Authorization", "Content-Type"));
-
-        // Permite credenciales (cookies, tokens)
         config.setAllowCredentials(true);
 
-        // Registrar el config
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
-
         return source;
     }
 }
