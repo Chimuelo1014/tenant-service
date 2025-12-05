@@ -36,6 +36,11 @@ public interface TenantService {
     List<TenantDTO> getTenantsByOwner(UUID ownerId);
 
     /**
+     * ✅ NUEVO: Obtener TODOS los tenants donde el usuario es owner O miembro
+     */
+    List<TenantDTO> getAllTenantsForUser(UUID userId);
+
+    /**
      * Actualizar tenant.
      */
     TenantDTO updateTenant(UUID tenantId, UpdateTenantRequest request, UUID userId);

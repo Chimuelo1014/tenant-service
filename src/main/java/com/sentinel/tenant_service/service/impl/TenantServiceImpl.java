@@ -1,5 +1,6 @@
 package com.sentinel.tenant_service.service.impl;
 
+import com.sentinel.tenant_service.client.UserManagementServiceClient;
 import com.sentinel.tenant_service.dto.request.CreateTenantRequest;
 import com.sentinel.tenant_service.dto.request.UpdateTenantRequest;
 import com.sentinel.tenant_service.dto.response.LimitValidationResponse;
@@ -17,8 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -28,6 +28,7 @@ public class TenantServiceImpl implements TenantService {
 
     private final TenantRepository tenantRepository;
     private final TenantEventPublisher eventPublisher;
+    private final UserManagementServiceClient userMgmtClient;
 
     @Override
     @Transactional
@@ -127,6 +128,76 @@ public class TenantServiceImpl implements TenantService {
                 .stream()
                 .map(this::mapToDTO)
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * ✅ NUEVO MÉTODO: Obtiene TODOS los tenants donde el usuario es owner O miembro
+     */
+    @Override
+    @Transactional(readOnly = true)
+    public List<TenantDTO> getAllTenantsForUser(UUID userId) {
+        log.info("🔍 Fetching ALL tenants for user: {}", userId);
+        
+        try {
+            // 1️⃣ Obtener tenants donde el usuario es OWNER
+            List<TenantEntity> ownedTenants = tenantRepository
+                .findByOwnerIdAndStatus(userId, TenantStatus.ACTIVE);
+            
+            log.info("👤 User {} OWNS {} tenants", userId, ownedTenants.size());
+
+            // 2️⃣ Obtener tenants donde el usuario es MIEMBRO (desde user-management-service)
+            List<UUID> memberTenantIds = new ArrayList<>();
+            
+            try {
+                memberTenantIds = userMgmtClient.getUserTenants(userId);
+                log.info("👥 User {} is MEMBER of {} tenants", userId, memberTenantIds.size());
+            } catch (Exception e) {
+                log.warn("⚠️ Could not fetch member tenants from user-management-service: {}", 
+                    e.getMessage());
+                // Continuar solo con owned tenants
+            }
+
+            // 3️⃣ Filtrar duplicados (excluir tenants donde ya es owner)
+            Set<UUID> ownedTenantIds = ownedTenants.stream()
+                .map(TenantEntity::getId)
+                .collect(Collectors.toSet());
+            
+            List<UUID> memberOnlyIds = memberTenantIds.stream()
+                .filter(id -> !ownedTenantIds.contains(id))
+                .collect(Collectors.toList());
+
+            log.debug("🔍 Member-only tenant IDs: {}", memberOnlyIds);
+
+            // 4️⃣ Buscar esos tenants adicionales
+            List<TenantEntity> memberTenants = memberOnlyIds.isEmpty() 
+                ? List.of() 
+                : tenantRepository.findAllById(memberOnlyIds);
+
+            log.info("✅ User {} has access to {} additional tenants as member", 
+                userId, memberTenants.size());
+
+            // 5️⃣ Combinar ambas listas
+            List<TenantEntity> allTenants = new ArrayList<>();
+            allTenants.addAll(ownedTenants);
+            allTenants.addAll(memberTenants);
+
+            log.info("📊 TOTAL tenants for user {}: {} (owned) + {} (member) = {}", 
+                userId, ownedTenants.size(), memberTenants.size(), allTenants.size());
+
+            return allTenants.stream()
+                    .map(this::mapToDTO)
+                    .collect(Collectors.toList());
+
+        } catch (Exception e) {
+            log.error("❌ Error fetching tenants for user {}: {}", userId, e.getMessage(), e);
+            
+            // 🛡️ Fallback: solo retornar tenants como owner
+            log.warn("⚠️ Falling back to owned tenants only");
+            return tenantRepository.findByOwnerIdAndStatus(userId, TenantStatus.ACTIVE)
+                    .stream()
+                    .map(this::mapToDTO)
+                    .collect(Collectors.toList());
+        }
     }
 
     @Override
@@ -287,7 +358,9 @@ public class TenantServiceImpl implements TenantService {
         log.info("Tenant activated: {}", tenantId);
     }
 
-    // Helper methods
+    // ============================================
+    // HELPER METHODS
+    // ============================================
 
     private String generateSlug(String name, UUID userId) {
         String baseSlug = name.toLowerCase()

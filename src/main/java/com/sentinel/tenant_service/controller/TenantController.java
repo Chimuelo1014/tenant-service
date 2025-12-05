@@ -27,15 +27,21 @@ public class TenantController {
     private final TenantService tenantService;
 
     /**
-     * Obtener mis tenants (como owner).
+     * ✅ ACTUALIZADO: Obtener TODOS los tenants del usuario (owned + member)
      * GET /api/tenants/me
      */
     @GetMapping("/me")
     public ResponseEntity<List<TenantDTO>> getMyTenants(
             @RequestHeader("X-User-Id") UUID userId
     ) {
-        log.info("Fetching tenants for user: {}", userId);
-        return ResponseEntity.ok(tenantService.getTenantsByOwner(userId));
+        log.info("Fetching ALL tenants for user: {}", userId);
+        
+        // ✅ CAMBIO: Ahora obtiene tenants como owner Y como miembro
+        List<TenantDTO> tenants = tenantService.getAllTenantsForUser(userId);
+        
+        log.info("✅ Returning {} tenants for user {}", tenants.size(), userId);
+        
+        return ResponseEntity.ok(tenants);
     }
 
     /**

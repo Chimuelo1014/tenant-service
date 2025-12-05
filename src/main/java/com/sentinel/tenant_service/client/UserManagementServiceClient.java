@@ -5,6 +5,7 @@ import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -32,6 +33,17 @@ public interface UserManagementServiceClient {
     );
 
     /**
+     * ✅ NUEVO: Obtiene lista de tenants donde el usuario es miembro
+     * GET /api/internal/users/{userId}/tenants
+     * 
+     * @return Lista de tenant IDs
+     */
+    @CircuitBreaker(name = "userMgmtService", fallbackMethod = "getUserTenantsFallback")
+    @Retry(name = "userMgmtService")
+    @GetMapping("/api/internal/users/{userId}/tenants")
+    List<UUID> getUserTenants(@PathVariable UUID userId);
+
+    /**
      * Verifica si un usuario es miembro de un tenant.
      */
     default boolean isTenantMember(UUID tenantId, UUID userId) {
@@ -50,5 +62,13 @@ public interface UserManagementServiceClient {
     default String getTenantRoleFallback(UUID tenantId, UUID userId, Exception ex) {
         // No lanzar excepción, retornar null para que el servicio decida
         return null;
+    }
+
+    /**
+     * ✅ NUEVO: Fallback para getUserTenants
+     */
+    default List<UUID> getUserTenantsFallback(UUID userId, Exception ex) {
+        // Retornar lista vacía en caso de error
+        return List.of();
     }
 }
