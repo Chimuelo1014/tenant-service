@@ -38,7 +38,7 @@ public class TenantInternalController {
      * Validar límite de recurso.
      * POST /api/tenants/internal/{tenantId}/validate-limit
      * 
-     * Body: { "resource": "PROJECT|DOMAIN|REPO", "currentCount": 5 }
+     * Query params: resource (PROJECT|DOMAIN|REPO|USER), currentCount
      */
     @PostMapping("/{tenantId}/validate-limit")
     public ResponseEntity<LimitValidationResponse> validateLimit(
