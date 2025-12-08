@@ -1,6 +1,6 @@
 package com.sentinel.tenant_service.entity;
 
-import com.sentinel.tenant_service.enums.TenantPlan;
+// import com.sentinel.tenant_service.enums.TenantPlan; // REMOVED - using planId
 import com.sentinel.tenant_service.enums.TenantStatus;
 import com.sentinel.tenant_service.enums.TenantType;
 import jakarta.persistence.*;
@@ -13,11 +13,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tenants", indexes = {
-    @Index(name = "idx_tenants_owner_id", columnList = "owner_id"),
-    @Index(name = "idx_tenants_slug", columnList = "slug"),
-    @Index(name = "idx_tenants_status", columnList = "status"),
-    @Index(name = "idx_tenants_plan", columnList = "plan"),
-    @Index(name = "idx_tenants_nit", columnList = "nit")
+        @Index(name = "idx_tenants_owner_id", columnList = "owner_id"),
+        @Index(name = "idx_tenants_slug", columnList = "slug"),
+        @Index(name = "idx_tenants_status", columnList = "status"),
+        @Index(name = "idx_tenants_plan_id", columnList = "plan_id"), // Changed from plan to plan_id
+        @Index(name = "idx_tenants_nit", columnList = "nit")
 })
 @Getter
 @Setter
@@ -55,11 +55,20 @@ public class TenantEntity {
     @Column(unique = true, length = 50)
     private String nit;
 
-    // Plan & Limits
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
+    // Plan & Subscription from billing-service
+    /**
+     * ID del plan desde billing-service (ej: "BASIC", "PRO", "ENTERPRISE").
+     * Null si no tiene suscripción activa.
+     */
+    @Column(name = "plan_id", length = 50)
+    private String planId;
+
+    /**
+     * Estado de la suscripción del tenant.
+     */
+    @Column(name = "subscription_status", length = 20)
     @Builder.Default
-    private TenantPlan plan = TenantPlan.FREE;
+    private String subscriptionStatus = "PENDING"; // ACTIVE, PENDING, SUSPENDED, CANCELLED
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
@@ -120,23 +129,15 @@ public class TenantEntity {
     private LocalDateTime updatedAt;
 
     // Helper methods
-    
-    /**
-     * Actualiza los límites según el plan actual.
-     */
-    public void updateLimitsFromPlan() {
-        this.maxUsers = plan.getMaxUsers();
-        this.maxProjects = plan.getMaxProjects();
-        this.maxDomains = plan.getMaxDomains();
-        this.maxRepos = plan.getMaxRepos();
-        this.blockchainEnabled = plan.isBlockchainEnabled();
-    }
+    // updateLimitsFromPlan() REMOVED - Los límites ahora se actualizan desde
+    // BillingEventListener
 
     /**
      * Verifica si puede crear más proyectos.
      */
     public boolean canCreateProject() {
-        return plan.hasUnlimitedProjects() || currentProjects < maxProjects;
+        // -1 significa proyectos ilimitados
+        return maxProjects == -1 || currentProjects < maxProjects;
     }
 
     /**

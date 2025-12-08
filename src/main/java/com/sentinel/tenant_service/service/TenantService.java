@@ -4,7 +4,7 @@ import com.sentinel.tenant_service.dto.request.CreateTenantRequest;
 import com.sentinel.tenant_service.dto.request.UpdateTenantRequest;
 import com.sentinel.tenant_service.dto.response.LimitValidationResponse;
 import com.sentinel.tenant_service.dto.response.TenantDTO;
-import com.sentinel.tenant_service.enums.TenantPlan;
+// import com.sentinel.tenant_service.enums.TenantPlan; // REMOVED
 
 import java.util.List;
 import java.util.UUID;
@@ -41,6 +41,11 @@ public interface TenantService {
     List<TenantDTO> getAllTenantsForUser(UUID userId);
 
     /**
+     * Admin: Obtener todos los tenants (paginado).
+     */
+    org.springframework.data.domain.Page<TenantDTO> getAllTenants(org.springframework.data.domain.Pageable pageable);
+
+    /**
      * Actualizar tenant.
      */
     TenantDTO updateTenant(UUID tenantId, UpdateTenantRequest request, UUID userId);
@@ -51,9 +56,15 @@ public interface TenantService {
     void deleteTenant(UUID tenantId, UUID userId);
 
     /**
-     * Upgrade de plan.
+     * Upgrade de plan desde billing-service.
+     * Ahora recibe el planId (String) en lugar del enum.
      */
-    TenantDTO upgradePlan(UUID tenantId, TenantPlan newPlan, UUID subscriptionId);
+    TenantDTO upgradePlan(UUID tenantId, String newPlanId, UUID subscriptionId);
+
+    /**
+     * Actualiza el plan y límites del tenant (usado por el listener).
+     */
+    void updateTenantPlan(UUID tenantId, String planId);
 
     /**
      * Validar si se puede crear un recurso (proyecto, dominio, etc.).

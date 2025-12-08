@@ -51,6 +51,12 @@ public interface TenantRepository extends JpaRepository<TenantEntity, UUID> {
     long countByOwnerIdAndStatus(@Param("ownerId") UUID ownerId, @Param("status") TenantStatus status);
 
     /**
+     * Contar tenants de un owner (solo los ACTIVE).
+     */
+    @Query("SELECT COUNT(t) FROM TenantEntity t WHERE t.ownerId = :ownerId AND t.status = 'ACTIVE'")
+    long countByOwnerId(@Param("ownerId") UUID ownerId);
+
+    /**
      * Buscar tenant por owner y slug.
      */
     Optional<TenantEntity> findByOwnerIdAndSlug(UUID ownerId, String slug);

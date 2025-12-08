@@ -22,7 +22,7 @@ public class RabbitMQConfig {
     private String upgradedRoutingKey;
 
     // -------------------------------
-    //  EXCHANGE
+    // EXCHANGE
     // -------------------------------
 
     @Bean
@@ -31,7 +31,7 @@ public class RabbitMQConfig {
     }
 
     // -------------------------------
-    //  QUEUES
+    // QUEUES
     // -------------------------------
 
     @Bean
@@ -45,7 +45,7 @@ public class RabbitMQConfig {
     }
 
     // -------------------------------
-    //  BINDINGS (cola → exchange → routing key)
+    // BINDINGS (cola → exchange → routing key)
     // -------------------------------
 
     @Bean
@@ -65,7 +65,29 @@ public class RabbitMQConfig {
     }
 
     // -------------------------------
-    //  JSON CONVERTER + RABBIT TEMPLATE
+    // BILLING INTEGRATION
+    // -------------------------------
+
+    @Bean
+    public TopicExchange billingExchange() {
+        return new TopicExchange("sentinel-billing-exchange", true, false);
+    }
+
+    @Bean
+    public Queue tenantBillingSubscriptionQueue() {
+        return new Queue("tenant.billing.subscription.queue", true);
+    }
+
+    @Bean
+    public Binding tenantBillingSubscriptionBinding() {
+        return BindingBuilder
+                .bind(tenantBillingSubscriptionQueue())
+                .to(billingExchange())
+                .with("billing.subscription.created");
+    }
+
+    // -------------------------------
+    // JSON CONVERTER + RABBIT TEMPLATE
     // -------------------------------
 
     @Bean
@@ -76,8 +98,7 @@ public class RabbitMQConfig {
     @Bean
     public RabbitTemplate rabbitTemplate(
             ConnectionFactory connectionFactory,
-            MessageConverter messageConverter
-    ) {
+            MessageConverter messageConverter) {
         RabbitTemplate template = new RabbitTemplate(connectionFactory);
         template.setMessageConverter(messageConverter);
         return template;

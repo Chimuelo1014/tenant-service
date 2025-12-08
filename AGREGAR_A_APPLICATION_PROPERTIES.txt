@@ -1,0 +1,15 @@
+# ============================================
+# AGREGAR AL FINAL DE tenant-service/src/main/resources/application.properties
+# ============================================
+
+# Billing Service Configuration
+services.billing.url=http://localhost:8084
+
+# Circuit Breaker
+resilience4j.circuitbreaker.instances.billingService.failureRateThreshold=50
+resilience4j.circuitbreaker.instances.billingService.waitDurationInOpenState=10000
+resilience4j.circuitbreaker.instances.billingService.slidingWindowSize=10
+
+# Retry
+resilience4j.retry.instances.billingService.maxAttempts=3
+resilience4j.retry.instances.billingService.waitDuration=1000

@@ -1,0 +1,645 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/C:/Users/USUARIO/.m2/wrapper/dists/apache-maven-3.9.6/0f95e7798d182e3371f3fee6d8202d3a56e6d71dfd3a2402139882ef2fbe7476/lib/jansi-2.4.0.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/C:/Users/USUARIO/.m2/wrapper/dists/apache-maven-3.9.6/0f95e7798d182e3371f3fee6d8202d3a56e6d71dfd3a2402139882ef2fbe7476/lib/guava-32.0.1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.sentinel:tenant-service >---------------------
+[INFO] Building tenant-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ tenant-service ---
+[INFO] Deleting C:\Users\USUARIO\Documents\RIWI\proyecto_ruta_avanzada\sentinel\project-root-java\project\tenant-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ tenant-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ tenant-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 47 source files with javac [debug parameters release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[42,17] cannot find symbol
+  symbol:   method setTenantId(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[43,17] cannot find symbol
+  symbol:   method setPlanId(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[44,17] cannot find symbol
+  symbol:   method setPlanName(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[45,17] cannot find symbol
+  symbol:   method setSubscriptionStatus(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[46,17] cannot find symbol
+  symbol:   method setMaxUsers(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[47,17] cannot find symbol
+  symbol:   method setMaxProjects(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[48,17] cannot find symbol
+  symbol:   method setMaxDomains(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[49,17] cannot find symbol
+  symbol:   method setMaxRepos(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[50,17] cannot find symbol
+  symbol:   method setIncludesBlockchain(boolean)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[59,17] cannot find symbol
+  symbol:   method setPlanId(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[60,17] cannot find symbol
+  symbol:   method setPlanName(java.lang.String)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[61,17] cannot find symbol
+  symbol:   method setMaxUsers(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[62,17] cannot find symbol
+  symbol:   method setMaxProjects(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[63,17] cannot find symbol
+  symbol:   method setMaxDomains(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[64,17] cannot find symbol
+  symbol:   method setMaxRepos(int)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[65,17] cannot find symbol
+  symbol:   method setIncludesBlockchain(boolean)
+  location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/security/jwt/JwtAuthenticationFilter.java:[72,21] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.security.jwt.JwtAuthenticationFilter
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/security/jwt/JwtAuthenticationFilter.java:[76,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.security.jwt.JwtAuthenticationFilter
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[37,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[41,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[55,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[67,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[80,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[95,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[108,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[120,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/dto/response/LimitValidationResponse.java:[19,39] cannot find symbol
+  symbol:   method builder()
+  location: class com.sentinel.tenant_service.dto.response.LimitValidationResponse
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/dto/response/LimitValidationResponse.java:[28,39] cannot find symbol
+  symbol:   method builder()
+  location: class com.sentinel.tenant_service.dto.response.LimitValidationResponse
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[33,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[48,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[67,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[80,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[37,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[50,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[64,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[78,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[92,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[105,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[39,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[39,74] cannot find symbol
+  symbol:   method getId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[44,36] cannot find symbol
+  symbol:   method getId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[45,34] cannot find symbol
+  symbol:   method getOwnerId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[46,32] cannot find symbol
+  symbol:   method getName()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[47,32] cannot find symbol
+  symbol:   method getSlug()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[48,32] cannot find symbol
+  symbol:   method getType()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[49,34] cannot find symbol
+  symbol:   method getPlanId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[55,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[63,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[63,80] cannot find symbol
+  symbol:   method getId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[68,36] cannot find symbol
+  symbol:   method getId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[73,41] cannot find symbol
+  symbol:   method getMaxUsers()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[74,44] cannot find symbol
+  symbol:   method getMaxProjects()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[75,43] cannot find symbol
+  symbol:   method getMaxDomains()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[76,41] cannot find symbol
+  symbol:   method getMaxRepos()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[77,50] cannot find symbol
+  symbol:   method isBlockchainEnabled()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[85,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[31,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[36,17] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[44,17] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[50,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[54,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[57,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[22,9] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[30,17] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[36,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[42,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[37,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[47,19] cannot find symbol
+  symbol:   method setPlanId(java.lang.String)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[48,19] cannot find symbol
+  symbol:   method setSubscriptionStatus(java.lang.String)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[49,19] cannot find symbol
+  symbol:   method setMaxUsers(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[50,19] cannot find symbol
+  symbol:   method setMaxProjects(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[51,19] cannot find symbol
+  symbol:   method setMaxDomains(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[52,19] cannot find symbol
+  symbol:   method setMaxRepos(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[53,19] cannot find symbol
+  symbol:   method setBlockchainEnabled(java.lang.Boolean)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[57,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,27] cannot find symbol
+  symbol:   method getId()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,51] cannot find symbol
+  symbol:   method getMaxUsers()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,73] cannot find symbol
+  symbol:   method getMaxProjects()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[61,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[77,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[83,19] cannot find symbol
+  symbol:   method setPlanId(java.lang.String)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[84,19] cannot find symbol
+  symbol:   method setMaxUsers(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[85,19] cannot find symbol
+  symbol:   method setMaxProjects(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[86,19] cannot find symbol
+  symbol:   method setMaxDomains(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[87,19] cannot find symbol
+  symbol:   method setMaxRepos(java.lang.Integer)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[88,19] cannot find symbol
+  symbol:   method setBlockchainEnabled(java.lang.Boolean)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[92,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[95,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[108,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[114,19] cannot find symbol
+  symbol:   method setSubscriptionStatus(java.lang.String)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[118,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[121,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingPaymentSucceededListener.java:[63,15] cannot find symbol
+  symbol:   method setNextBillingDate(java.time.LocalDateTime)
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingPaymentSucceededListener.java:[68,33] cannot find symbol
+  symbol:   method getNextBillingDate()
+  location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[39,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[54,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[76,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[86,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[100,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/impl/TenantInvitationServiceImpl.java:[46,13] cannot find symbol
+  symbol:   variable log
+  location: class com.sentinel.tenant_service.service.impl.TenantInvitationServiceImpl
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.109 s
+[INFO] Finished at: 2025-12-08T00:00:33-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project tenant-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[42,17] cannot find symbol
+[ERROR]   symbol:   method setTenantId(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[43,17] cannot find symbol
+[ERROR]   symbol:   method setPlanId(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[44,17] cannot find symbol
+[ERROR]   symbol:   method setPlanName(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[45,17] cannot find symbol
+[ERROR]   symbol:   method setSubscriptionStatus(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[46,17] cannot find symbol
+[ERROR]   symbol:   method setMaxUsers(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[47,17] cannot find symbol
+[ERROR]   symbol:   method setMaxProjects(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[48,17] cannot find symbol
+[ERROR]   symbol:   method setMaxDomains(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[49,17] cannot find symbol
+[ERROR]   symbol:   method setMaxRepos(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[50,17] cannot find symbol
+[ERROR]   symbol:   method setIncludesBlockchain(boolean)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.TenantSubscriptionLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[59,17] cannot find symbol
+[ERROR]   symbol:   method setPlanId(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[60,17] cannot find symbol
+[ERROR]   symbol:   method setPlanName(java.lang.String)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[61,17] cannot find symbol
+[ERROR]   symbol:   method setMaxUsers(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[62,17] cannot find symbol
+[ERROR]   symbol:   method setMaxProjects(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[63,17] cannot find symbol
+[ERROR]   symbol:   method setMaxDomains(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[64,17] cannot find symbol
+[ERROR]   symbol:   method setMaxRepos(int)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/client/BillingServiceClient.java:[65,17] cannot find symbol
+[ERROR]   symbol:   method setIncludesBlockchain(boolean)
+[ERROR]   location: variable fallback of type com.sentinel.tenant_service.client.dto.PlanLimitsDTO
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/security/jwt/JwtAuthenticationFilter.java:[72,21] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.security.jwt.JwtAuthenticationFilter
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/security/jwt/JwtAuthenticationFilter.java:[76,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.security.jwt.JwtAuthenticationFilter
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[37,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[41,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[55,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[67,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[80,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[95,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[108,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantController.java:[120,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/dto/response/LimitValidationResponse.java:[19,39] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.sentinel.tenant_service.dto.response.LimitValidationResponse
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/dto/response/LimitValidationResponse.java:[28,39] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.sentinel.tenant_service.dto.response.LimitValidationResponse
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[33,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[48,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[67,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInternalController.java:[80,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInternalController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[37,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[50,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[64,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[78,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[92,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/controller/TenantInvitationController.java:[105,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.controller.TenantInvitationController
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[39,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[39,74] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[44,36] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[45,34] cannot find symbol
+[ERROR]   symbol:   method getOwnerId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[46,32] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[47,32] cannot find symbol
+[ERROR]   symbol:   method getSlug()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[48,32] cannot find symbol
+[ERROR]   symbol:   method getType()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[49,34] cannot find symbol
+[ERROR]   symbol:   method getPlanId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[55,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[63,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[63,80] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[68,36] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[73,41] cannot find symbol
+[ERROR]   symbol:   method getMaxUsers()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[74,44] cannot find symbol
+[ERROR]   symbol:   method getMaxProjects()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[75,43] cannot find symbol
+[ERROR]   symbol:   method getMaxDomains()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[76,41] cannot find symbol
+[ERROR]   symbol:   method getMaxRepos()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[77,50] cannot find symbol
+[ERROR]   symbol:   method isBlockchainEnabled()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/TenantEventPublisher.java:[85,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.TenantEventPublisher
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[31,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[36,17] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[44,17] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[50,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[54,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/events/listeners/UserRegisteredListener.java:[57,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.events.listeners.UserRegisteredListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[22,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[30,17] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[36,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listener/TenantBillingListener.java:[42,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listener.TenantBillingListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[37,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[47,19] cannot find symbol
+[ERROR]   symbol:   method setPlanId(java.lang.String)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[48,19] cannot find symbol
+[ERROR]   symbol:   method setSubscriptionStatus(java.lang.String)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[49,19] cannot find symbol
+[ERROR]   symbol:   method setMaxUsers(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[50,19] cannot find symbol
+[ERROR]   symbol:   method setMaxProjects(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[51,19] cannot find symbol
+[ERROR]   symbol:   method setMaxDomains(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[52,19] cannot find symbol
+[ERROR]   symbol:   method setMaxRepos(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[53,19] cannot find symbol
+[ERROR]   symbol:   method setBlockchainEnabled(java.lang.Boolean)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[57,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,27] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,51] cannot find symbol
+[ERROR]   symbol:   method getMaxUsers()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[58,73] cannot find symbol
+[ERROR]   symbol:   method getMaxProjects()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[61,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[77,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[83,19] cannot find symbol
+[ERROR]   symbol:   method setPlanId(java.lang.String)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[84,19] cannot find symbol
+[ERROR]   symbol:   method setMaxUsers(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[85,19] cannot find symbol
+[ERROR]   symbol:   method setMaxProjects(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[86,19] cannot find symbol
+[ERROR]   symbol:   method setMaxDomains(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[87,19] cannot find symbol
+[ERROR]   symbol:   method setMaxRepos(java.lang.Integer)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[88,19] cannot find symbol
+[ERROR]   symbol:   method setBlockchainEnabled(java.lang.Boolean)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[92,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[95,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[108,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[114,19] cannot find symbol
+[ERROR]   symbol:   method setSubscriptionStatus(java.lang.String)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[118,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingEventListener.java:[121,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.listeners.BillingEventListener
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingPaymentSucceededListener.java:[63,15] cannot find symbol
+[ERROR]   symbol:   method setNextBillingDate(java.time.LocalDateTime)
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/listeners/BillingPaymentSucceededListener.java:[68,33] cannot find symbol
+[ERROR]   symbol:   method getNextBillingDate()
+[ERROR]   location: variable tenant of type com.sentinel.tenant_service.entity.TenantEntity
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[39,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[54,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[76,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[86,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/UserLimitsService.java:[100,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.UserLimitsService
+[ERROR] /C:/Users/USUARIO/Documents/RIWI/proyecto_ruta_avanzada/sentinel/project-root-java/project/tenant-service/src/main/java/com/sentinel/tenant_service/service/impl/TenantInvitationServiceImpl.java:[46,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.sentinel.tenant_service.service.impl.TenantInvitationServiceImpl
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

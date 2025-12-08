@@ -33,7 +33,7 @@ public interface UserManagementServiceClient {
     );
 
     /**
-     * ✅ NUEVO: Obtiene lista de tenants donde el usuario es miembro
+     * Obtiene lista de tenants donde el usuario es miembro
      * GET /api/internal/users/{userId}/tenants
      * 
      * @return Lista de tenant IDs
@@ -42,6 +42,28 @@ public interface UserManagementServiceClient {
     @Retry(name = "userMgmtService")
     @GetMapping("/api/internal/users/{userId}/tenants")
     List<UUID> getUserTenants(@PathVariable UUID userId);
+
+    /**
+     * ✅ NUEVO: Obtiene lista de proyectos donde el usuario participa
+     * GET /api/internal/users/{userId}/projects
+     * 
+     * @return Lista de project IDs
+     */
+    @CircuitBreaker(name = "userMgmtService", fallbackMethod = "getUserProjectsFallback")
+    @Retry(name = "userMgmtService")
+    @GetMapping("/api/internal/users/{userId}/projects")
+    List<UUID> getUserProjects(@PathVariable UUID userId);
+
+    /**
+     * ✅ NUEVO: Obtiene el plan del usuario
+     * GET /api/internal/users/{userId}/plan
+     * 
+     * @return UserPlanDTO con información del plan
+     */
+    @CircuitBreaker(name = "userMgmtService", fallbackMethod = "getUserPlanFallback")
+    @Retry(name = "userMgmtService")
+    @GetMapping("/api/internal/users/{userId}/plan")
+    UserPlanResponse getUserPlan(@PathVariable UUID userId);
 
     /**
      * Verifica si un usuario es miembro de un tenant.
@@ -60,15 +82,48 @@ public interface UserManagementServiceClient {
      * Retorna null para indicar que no se pudo verificar.
      */
     default String getTenantRoleFallback(UUID tenantId, UUID userId, Exception ex) {
-        // No lanzar excepción, retornar null para que el servicio decida
         return null;
     }
 
     /**
-     * ✅ NUEVO: Fallback para getUserTenants
+     * Fallback para getUserTenants
      */
     default List<UUID> getUserTenantsFallback(UUID userId, Exception ex) {
-        // Retornar lista vacía en caso de error
         return List.of();
+    }
+
+    /**
+     * ✅ NUEVO: Fallback para getUserProjects
+     */
+    default List<UUID> getUserProjectsFallback(UUID userId, Exception ex) {
+        return List.of();
+    }
+
+    /**
+     * ✅ NUEVO: Fallback para getUserPlan - retorna plan FREE por defecto
+     */
+    default UserPlanResponse getUserPlanFallback(UUID userId, Exception ex) {
+        return new UserPlanResponse("FREE");
+    }
+
+    /**
+     * DTO simple para la respuesta del plan del usuario
+     */
+    class UserPlanResponse {
+        private String plan;
+
+        public UserPlanResponse() {}
+        
+        public UserPlanResponse(String plan) {
+            this.plan = plan;
+        }
+
+        public String getPlan() {
+            return plan;
+        }
+
+        public void setPlan(String plan) {
+            this.plan = plan;
+        }
     }
 }

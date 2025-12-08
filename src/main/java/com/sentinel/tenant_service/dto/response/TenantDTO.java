@@ -1,6 +1,6 @@
 package com.sentinel.tenant_service.dto.response;
 
-import com.sentinel.tenant_service.enums.TenantPlan;
+// import com.sentinel.tenant_service.enums.TenantPlan; // REMOVED
 import com.sentinel.tenant_service.enums.TenantStatus;
 import com.sentinel.tenant_service.enums.TenantType;
 import lombok.*;
@@ -13,27 +13,28 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TenantDTO {
-    
+
     private UUID id;
     private String name;
     private String slug;
     private TenantType type;
-    
+
     private UUID ownerId;
     private String ownerEmail;
-    
+
     private String businessName;
     private String nit;
-    
-    private TenantPlan plan;
+
+    private String planId; // Changed from TenantPlan enum
+    private String subscriptionStatus; // PENDING, ACTIVE, CANCELLED
     private TenantStatus status;
-    
+
     private TenantLimitsDTO limits;
     private TenantUsageDTO usage;
-    
+
     private UUID subscriptionId;
     private LocalDateTime nextBillingDate;
-    
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

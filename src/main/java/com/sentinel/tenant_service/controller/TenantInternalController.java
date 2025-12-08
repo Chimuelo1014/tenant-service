@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 /**
- * Internal API Controller para comunicación inter-servicios.
- * Endpoints sin autenticación para Feign Clients.
+ * Internal API Controller for inter-service communication.
+ * Endpoints without authentication for Feign Clients.
  */
 @Slf4j
 @RestController
@@ -23,10 +23,10 @@ public class TenantInternalController {
     private final TenantService tenantService;
 
     /**
-     * Obtener tenant por ID (interno).
+     * Get tenant by ID (internal).
      * GET /api/tenants/internal/{tenantId}
      * 
-     * Usado por: project-service (Feign Client)
+     * Used by: project-service (Feign Client)
      */
     @GetMapping("/{tenantId}")
     public ResponseEntity<TenantDTO> getTenant(@PathVariable UUID tenantId) {
@@ -35,7 +35,7 @@ public class TenantInternalController {
     }
 
     /**
-     * Validar límite de recurso.
+     * Validate resource limit.
      * POST /api/tenants/internal/{tenantId}/validate-limit
      * 
      * Query params: resource (PROJECT|DOMAIN|REPO|USER), currentCount
@@ -44,43 +44,39 @@ public class TenantInternalController {
     public ResponseEntity<LimitValidationResponse> validateLimit(
             @PathVariable UUID tenantId,
             @RequestParam String resource,
-            @RequestParam int currentCount
-    ) {
-        log.debug("Validating {} limit for tenant: {} (current: {})", 
-            resource, tenantId, currentCount);
-        
+            @RequestParam int currentCount) {
+        log.debug("Validating {} limit for tenant: {} (current: {})",
+                resource, tenantId, currentCount);
+
         LimitValidationResponse response = tenantService.validateLimit(
-            tenantId,
-            resource,
-            currentCount
-        );
-        
+                tenantId,
+                resource,
+                currentCount);
+
         return ResponseEntity.ok(response);
     }
 
     /**
-     * Incrementar contador de recurso.
+     * Increment resource counter.
      * POST /api/tenants/internal/{tenantId}/resources/increment?resource=PROJECT
      */
     @PostMapping("/{tenantId}/resources/increment")
     public ResponseEntity<Void> incrementResource(
             @PathVariable UUID tenantId,
-            @RequestParam String resource
-    ) {
+            @RequestParam String resource) {
         log.debug("Incrementing {} for tenant: {}", resource, tenantId);
         tenantService.incrementResourceCount(tenantId, resource);
         return ResponseEntity.ok().build();
     }
 
     /**
-     * Decrementar contador de recurso.
+     * Decrement resource counter.
      * POST /api/tenants/internal/{tenantId}/resources/decrement?resource=PROJECT
      */
     @PostMapping("/{tenantId}/resources/decrement")
     public ResponseEntity<Void> decrementResource(
             @PathVariable UUID tenantId,
-            @RequestParam String resource
-    ) {
+            @RequestParam String resource) {
         log.debug("Decrementing {} for tenant: {}", resource, tenantId);
         tenantService.decrementResourceCount(tenantId, resource);
         return ResponseEntity.ok().build();

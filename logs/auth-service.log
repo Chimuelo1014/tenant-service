@@ -1,0 +1,638 @@
+2025-12-05 20:53:56 [main] INFO  c.s.auth.AuthServiceApplication - Starting AuthServiceApplication v0.0.1-SNAPSHOT using Java 21.0.9 with PID 369066 (/home/samup/Documentos/sentinel/auth-service/target/auth-service-0.0.1-SNAPSHOT.jar started by samup in /home/samup/Documentos/sentinel/tenant-service)
+2025-12-05 20:53:56 [main] DEBUG c.s.auth.AuthServiceApplication - Running with Spring Boot v3.2.12, Spring v6.1.15
+2025-12-05 20:53:56 [main] INFO  c.s.auth.AuthServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-05 20:54:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-05 20:54:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 298 ms. Found 4 JPA repository interfaces.
+2025-12-05 20:54:01 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=841f0675-cd44-3e31-9ca5-7d9e9980eb19
+2025-12-05 20:54:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-12-05 20:54:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-05 20:54:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-05 20:54:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-05 20:54:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6993 ms
+2025-12-05 20:54:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-05 20:54:05 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1029cf9
+2025-12-05 20:54:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-05 20:54:05 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-05 20:54:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.10.Final
+2025-12-05 20:54:05 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-05 20:54:06 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-05 20:54:06 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-05 20:54:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-05 20:54:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-05 20:54:09 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-05 20:54:11 [main] DEBUG c.s.a.s.f.JWTAuthenticationFilter - Filter 'JWTAuthenticationFilter' configured for use
+2025-12-05 20:54:13 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-05 20:54:13 [main] INFO  c.s.auth.config.SecurityConfig - 🔧 Configuring SecurityFilterChain with OAuth2
+2025-12-05 20:54:14 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-12-05 20:54:14 [main] INFO  c.s.auth.config.SecurityConfig - ✅ SecurityFilterChain configured successfully
+2025-12-05 20:54:14 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42000b02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e767943, org.springframework.security.web.context.SecurityContextHolderFilter@5bf9c995, org.springframework.security.web.header.HeaderWriterFilter@11f2be38, org.springframework.web.filter.CorsFilter@1cbb101b, org.springframework.security.web.authentication.logout.LogoutFilter@11c929a2, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2939bfa0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@743fc1ee, com.sentinel.auth.security.filters.JWTAuthenticationFilter@17f43f4a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@41cc3795, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4bf14a9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71e7b3c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d186b14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@96b00fb, org.springframework.security.web.session.SessionManagementFilter@59632e3c, org.springframework.security.web.access.ExceptionTranslationFilter@3ed0e816, org.springframework.security.web.access.intercept.AuthorizationFilter@562998d3]
+2025-12-05 20:54:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+2025-12-05 20:54:16 [main] INFO  c.s.auth.AuthServiceApplication - Started AuthServiceApplication in 21.481 seconds (process running for 22.959)
+2025-12-05 20:54:39 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-05 20:54:39 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-05 20:54:39 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-12-05 20:54:39 [http-nio-8081-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2025-12-05 20:54:39 [http-nio-8081-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#21707a18:0/SimpleConnection@157a8660 [delegate=amqp://guest@127.0.0.1:5672/, localPort=39354]
+2025-12-05 20:55:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 20:55:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
+2025-12-05 20:55:35 [http-nio-8081-exec-2] INFO  c.s.a.service.impl.AuthServiceImpl - Registering new user: test2@example.com
+2025-12-05 20:55:35 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=? 
+    fetch
+        first ? rows only
+2025-12-05 20:55:35 [http-nio-8081-exec-2] INFO  c.s.a.service.impl.AuthServiceImpl - User created with ID: 5f6d7a0c-443e-4266-86ea-bb978edc4c7d
+2025-12-05 20:55:35 [async-1] INFO  c.s.auth.events.AuthEventPublisher - Published user.registered event for user: 5f6d7a0c-443e-4266-86ea-bb978edc4c7d
+2025-12-05 20:55:35 [async-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:55:35 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (auth_provider, created_at, email, email_verified, failed_login_attempts, global_role, last_login, last_password_change, locked_until, password, plan, provider_user_id, status, tenant_id, two_factor_enabled, two_factor_secret, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:55:35 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:55:35 [async-2] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_REGISTERED
+2025-12-05 20:56:09 [http-nio-8081-exec-3] INFO  c.s.a.service.impl.AuthServiceImpl - Registering new user: test1@correo.com
+2025-12-05 20:56:09 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=? 
+    fetch
+        first ? rows only
+2025-12-05 20:56:23 [http-nio-8081-exec-6] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test1@correo.com
+2025-12-05 20:56:23 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 20:56:23 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 20:56:24 [http-nio-8081-exec-6] INFO  c.s.a.service.impl.AuthServiceImpl - User logged in successfully: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 20:56:24 [async-2] DEBUG c.s.auth.events.AuthEventPublisher - Published user.login event for user: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 20:56:24 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:56:24 [async-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:56:24 [async-1] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_LOGIN
+2025-12-05 20:56:24 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        auth_provider=?,
+        email=?,
+        email_verified=?,
+        failed_login_attempts=?,
+        global_role=?,
+        last_login=?,
+        last_password_change=?,
+        locked_until=?,
+        password=?,
+        plan=?,
+        provider_user_id=?,
+        status=?,
+        tenant_id=?,
+        two_factor_enabled=?,
+        two_factor_secret=?,
+        updated_at=? 
+    where
+        id=?
+2025-12-05 20:56:54 [http-nio-8081-exec-7] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test2@correo.com
+2025-12-05 20:56:54 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 20:57:08 [http-nio-8081-exec-8] INFO  c.s.a.service.impl.AuthServiceImpl - Registering new user: test2@correo.com
+2025-12-05 20:57:08 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=? 
+    fetch
+        first ? rows only
+2025-12-05 20:57:08 [http-nio-8081-exec-8] INFO  c.s.a.service.impl.AuthServiceImpl - User created with ID: c16c69e4-bc96-45ea-a97f-b0190bf64392
+2025-12-05 20:57:08 [async-2] INFO  c.s.auth.events.AuthEventPublisher - Published user.registered event for user: c16c69e4-bc96-45ea-a97f-b0190bf64392
+2025-12-05 20:57:08 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (auth_provider, created_at, email, email_verified, failed_login_attempts, global_role, last_login, last_password_change, locked_until, password, plan, provider_user_id, status, tenant_id, two_factor_enabled, two_factor_secret, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:57:08 [async-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:57:08 [http-nio-8081-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:57:08 [async-1] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_REGISTERED
+2025-12-05 20:57:48 [http-nio-8081-exec-9] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test1@correo.com
+2025-12-05 20:57:48 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 20:57:48 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 20:57:48 [http-nio-8081-exec-9] INFO  c.s.a.service.impl.AuthServiceImpl - User logged in successfully: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 20:57:48 [async-1] DEBUG c.s.auth.events.AuthEventPublisher - Published user.login event for user: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 20:57:48 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:57:48 [async-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 20:57:48 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        auth_provider=?,
+        email=?,
+        email_verified=?,
+        failed_login_attempts=?,
+        global_role=?,
+        last_login=?,
+        last_password_change=?,
+        locked_until=?,
+        password=?,
+        plan=?,
+        provider_user_id=?,
+        status=?,
+        tenant_id=?,
+        two_factor_enabled=?,
+        two_factor_secret=?,
+        updated_at=? 
+    where
+        id=?
+2025-12-05 20:57:48 [async-2] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_LOGIN
+2025-12-05 21:00:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 21:00:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
+2025-12-05 21:01:12 [http-nio-8081-exec-1] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test1@correo.com
+2025-12-05 21:01:12 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:01:12 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:01:12 [http-nio-8081-exec-1] INFO  c.s.a.service.impl.AuthServiceImpl - User logged in successfully: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 21:01:12 [async-4] DEBUG c.s.auth.events.AuthEventPublisher - Published user.login event for user: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 21:01:12 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:01:12 [async-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:01:12 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        auth_provider=?,
+        email=?,
+        email_verified=?,
+        failed_login_attempts=?,
+        global_role=?,
+        last_login=?,
+        last_password_change=?,
+        locked_until=?,
+        password=?,
+        plan=?,
+        provider_user_id=?,
+        status=?,
+        tenant_id=?,
+        two_factor_enabled=?,
+        two_factor_secret=?,
+        updated_at=? 
+    where
+        id=?
+2025-12-05 21:01:12 [async-3] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_LOGIN
+2025-12-05 21:02:13 [http-nio-8081-exec-4] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test2@correo.com
+2025-12-05 21:02:13 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:02:13 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:02:13 [http-nio-8081-exec-4] INFO  c.s.a.service.impl.AuthServiceImpl - User logged in successfully: c16c69e4-bc96-45ea-a97f-b0190bf64392
+2025-12-05 21:02:13 [async-6] DEBUG c.s.auth.events.AuthEventPublisher - Published user.login event for user: c16c69e4-bc96-45ea-a97f-b0190bf64392
+2025-12-05 21:02:13 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:02:13 [async-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:02:13 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        auth_provider=?,
+        email=?,
+        email_verified=?,
+        failed_login_attempts=?,
+        global_role=?,
+        last_login=?,
+        last_password_change=?,
+        locked_until=?,
+        password=?,
+        plan=?,
+        provider_user_id=?,
+        status=?,
+        tenant_id=?,
+        two_factor_enabled=?,
+        two_factor_secret=?,
+        updated_at=? 
+    where
+        id=?
+2025-12-05 21:02:13 [async-5] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_LOGIN
+2025-12-05 21:02:50 [http-nio-8081-exec-3] INFO  c.s.a.service.impl.AuthServiceImpl - Login attempt for user: test1@correo.com
+2025-12-05 21:02:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:02:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        ue1_0.id,
+        ue1_0.auth_provider,
+        ue1_0.created_at,
+        ue1_0.email,
+        ue1_0.email_verified,
+        ue1_0.failed_login_attempts,
+        ue1_0.global_role,
+        ue1_0.last_login,
+        ue1_0.last_password_change,
+        ue1_0.locked_until,
+        ue1_0.password,
+        ue1_0.plan,
+        ue1_0.provider_user_id,
+        ue1_0.status,
+        ue1_0.tenant_id,
+        ue1_0.two_factor_enabled,
+        ue1_0.two_factor_secret,
+        ue1_0.updated_at 
+    from
+        users ue1_0 
+    where
+        ue1_0.email=?
+2025-12-05 21:02:50 [http-nio-8081-exec-3] INFO  c.s.a.service.impl.AuthServiceImpl - User logged in successfully: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 21:02:50 [async-5] DEBUG c.s.auth.events.AuthEventPublisher - Published user.login event for user: 7ac6bcef-ddf0-4497-ac03-8ce1f70edb89
+2025-12-05 21:02:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        refresh_tokens
+        (created_at, expires_at, ip_address, revoked_at, status, token_hash, used_at, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:02:50 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        auth_provider=?,
+        email=?,
+        email_verified=?,
+        failed_login_attempts=?,
+        global_role=?,
+        last_login=?,
+        last_password_change=?,
+        locked_until=?,
+        password=?,
+        plan=?,
+        provider_user_id=?,
+        status=?,
+        tenant_id=?,
+        two_factor_enabled=?,
+        two_factor_secret=?,
+        updated_at=? 
+    where
+        id=?
+2025-12-05 21:02:50 [async-6] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        audit_logs
+        (action, details, error_message, ip_address, success, tenant_id, timestamp, user_agent, user_id, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-12-05 21:02:50 [async-6] DEBUG c.s.a.s.impl.AuditLogServiceImpl - Audit log created for action: USER_LOGIN
+2025-12-05 21:05:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 21:05:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
+2025-12-05 21:10:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 21:10:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
+2025-12-05 21:15:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 21:15:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
+2025-12-05 21:20:00 [scheduling-1] DEBUG c.s.a.s.AccountUnlockScheduler - Checking for expired account locks
+2025-12-05 21:20:00 [scheduling-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=?,
+        locked_until=null 
+    where
+        status=? 
+        and locked_until<?
